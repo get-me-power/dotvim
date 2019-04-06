@@ -1,0 +1,15 @@
+[submodule "lightline.vim"]
+	path = lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "pack/mypackage/start/lightline.vim"]
+	path = pack/mypackage/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "pack/mypackage/start/vim-gitbranch"]
+	path = pack/mypackage/start/vim-gitbranch
+	url = https://github.com/itchyny/vim-gitbranch.git
+[submodule "pack/mypackage/start/vimdoc-ja"]
+	path = pack/mypackage/start/vimdoc-ja
+	url = https://github.com/vim-jp/vimdoc-ja.git
+[submodule "pack/mypackage/start/vim-surround"]
+	path = pack/mypackage/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
