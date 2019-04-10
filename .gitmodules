@@ -10,3 +10,6 @@
 [submodule "pack/mypackage/start/vim-surround"]
 	path = pack/mypackage/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/mypackage/start/vital.vim"]
+	path = pack/mypackage/start/vital.vim
+	url = https://github.com/vim-jp/vital.vim.git
