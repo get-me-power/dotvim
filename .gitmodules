@@ -13,3 +13,6 @@
 [submodule "pack/mypackage/start/vital.vim"]
 	path = pack/mypackage/start/vital.vim
 	url = https://github.com/vim-jp/vital.vim.git
+[submodule "pack/mypackage/start/webapi-vim"]
+	path = pack/mypackage/start/webapi-vim
+	url = https://github.com/mattn/webapi-vim.git
