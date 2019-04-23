@@ -16,3 +16,9 @@
 [submodule "pack/mypackage/start/webapi-vim"]
 	path = pack/mypackage/start/webapi-vim
 	url = https://github.com/mattn/webapi-vim.git
+[submodule "pack/mypackage/start/vim-colorschemes"]
+	path = pack/mypackage/start/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "pack/mypackage/start/vim-polyglot"]
+	path = pack/mypackage/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
