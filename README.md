@@ -2,9 +2,15 @@
 
 ## update plugin's command
 
-```
-$ git submodule foreach git pull
-```
+do this command
+    ```
+    $ git submodule foreach git pull
+    ```
+or
+    ```
+    $ git submodule foreach git pull origin master
+    ```
+
 ## add plugin
 
 you must transfar plugin's directory and do command below
