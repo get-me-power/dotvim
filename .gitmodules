@@ -22,6 +22,3 @@
 [submodule "pack/mypackage/start/vim-polyglot"]
 	path = pack/mypackage/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "vim-gotham"]
-	path = pack/mypackage/start/vim-gotham
-	url = https://github.com/whatyouhide/vim-gotham.git
