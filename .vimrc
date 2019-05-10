@@ -67,6 +67,7 @@ let g:lightline = {
 
 "shellのキーバインド設定"
 tnoremap <silent> <ESC> <C-\><C-n>
+nnoremap <ESC><ESC> :nohlsearch<CR>
 
 
 "helpを日本語化"
