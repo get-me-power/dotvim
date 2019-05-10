@@ -1,2 +1,2 @@
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/pack ~/.vim
+ln -sf ~/dotfiles/pack ~/.vim/pack
