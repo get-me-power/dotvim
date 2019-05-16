@@ -22,6 +22,6 @@
 [submodule "pack/mypackage/start/vim-polyglot"]
 	path = pack/mypackage/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "vim-indent-guides"]
-	path = vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "pack/mypackage/start/open-browser.vim"]
+	path = pack/mypackage/start/open-browser.vim
+	url = https://github.com/tyru/open-browser.vim.git
