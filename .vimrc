@@ -69,6 +69,12 @@ let g:lightline = {
 tnoremap <silent> <ESC> <C-\><C-n>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
+"hjkl縛り"
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
 
 "helpを日本語化"
 set helplang=ja,en
@@ -78,4 +84,5 @@ set helplang=ja,en
 "set runtimepath+=~/sweep_trail.vim
 "set runtimepath+=~/Timer.vim
 "set runtimepath+=~/EmacsKeyBind.vim
-"set runtimepath+=~/workspace/Weather.vim
+set runtimepath+=~/workspace/Weather.vim
+set runtimepath+=~/Tweet.vim
