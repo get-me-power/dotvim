@@ -1,6 +1,12 @@
 syntax enable
 filetype plugin indent on
 
+"backgroundを暗い色に設定"
+set background=dark
+
+"colorschemeをgruvboxに設定
+colorscheme gruvbox
+
 "行番号を表示"
 set number
 
@@ -69,13 +75,15 @@ let g:lightline = {
 tnoremap <silent> <ESC> <C-\><C-n>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
-
 "helpを日本語化"
 set helplang=ja,en
+set runtimepath+=~/Tweet.vim
+set runtimepath+=~/translate.vim
 "set runtimepath+=~/Javasnippet.vim
 "set runtimepath+=~/InsertSemiColon.vim
 "set runtimepath+=~/vim-zenspace
 "set runtimepath+=~/sweep_trail.vim
 "set runtimepath+=~/Timer.vim
-"set runtimepath+=~/EmacsKeyBind.vim
+"set runtimepath+=~/trancelate.vim
 "set runtimepath+=~/workspace/Weather.vim
+set runtimepath+=~/vim-amake
