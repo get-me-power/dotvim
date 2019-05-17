@@ -73,10 +73,20 @@ let g:lightline = {
 
 "shellのキーバインド設定"
 tnoremap <silent> <ESC> <C-\><C-n>
+
+"検索ハイライトの設定"
 nnoremap <ESC><ESC> :nohlsearch<CR>
+
+"hjkl縛り"
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 "helpを日本語化"
 set helplang=ja,en
+
+" ---- setting custom plugins ------- "
 set runtimepath+=~/Tweet.vim
 set runtimepath+=~/translate.vim
 "set runtimepath+=~/Javasnippet.vim
@@ -84,6 +94,6 @@ set runtimepath+=~/translate.vim
 "set runtimepath+=~/vim-zenspace
 "set runtimepath+=~/sweep_trail.vim
 "set runtimepath+=~/Timer.vim
-"set runtimepath+=~/trancelate.vim
 "set runtimepath+=~/workspace/Weather.vim
 set runtimepath+=~/vim-amake
+set runtimepath+=~/Tweet.vim
