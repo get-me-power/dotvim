@@ -86,14 +86,22 @@ noremap <Right> <Nop>
 "helpを日本語化"
 set helplang=ja,en
 
+" インデントコマンドを定義
+function Indent()
+    let save_cursor = getcurpos()
+    execute("normal " . "gg=G")
+    call setpos('.', save_cursor)
+endfunction
+command -nargs=0 Indent call Indent()
+
+
 " ---- setting custom plugins ------- "
-set runtimepath+=~/Tweet.vim
-set runtimepath+=~/translate.vim
 "set runtimepath+=~/Javasnippet.vim
 "set runtimepath+=~/InsertSemiColon.vim
 "set runtimepath+=~/vim-zenspace
 "set runtimepath+=~/sweep_trail.vim
 "set runtimepath+=~/Timer.vim
-"set runtimepath+=~/workspace/Weather.vim
-set runtimepath+=~/vim-amake
+set runtimepath+=~/workspace/Weather.vim
+"set runtimepath+=~/vim-amake
 set runtimepath+=~/Tweet.vim
+set runtimepath+=~/commentout.vim
