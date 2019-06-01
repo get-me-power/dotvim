@@ -51,9 +51,9 @@ let mapleader = "\<Space>"
 nnoremap <Leader>t :terminal<CR>
 
 "スペース + v でターミナル起動"
-nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>v :Vexplore!<CR>
 
-nnoremap <Leader>s :split<CR>
+nnoremap <Leader>s :Hexplore<CR>
 
 "ウインドウ移動ショートカットをswに当てる"
 nnoremap sw <C-w>w
@@ -94,7 +94,6 @@ function Indent()
 endfunction
 command -nargs=0 Indent call Indent()
 
-
 " ---- setting custom plugins ------- "
 "set runtimepath+=~/Javasnippet.vim
 "set runtimepath+=~/InsertSemiColon.vim
@@ -105,3 +104,4 @@ set runtimepath+=~/workspace/Weather.vim
 "set runtimepath+=~/vim-amake
 set runtimepath+=~/Tweet.vim
 set runtimepath+=~/commentout.vim
+set runtimepath+=~/latex.vim
