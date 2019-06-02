@@ -94,6 +94,40 @@ function Indent()
 endfunction
 command -nargs=0 Indent call Indent()
 
+" 補完コマンドの再設定
+inoremap <expr><Tab> pumvisible() ? "\<C-n>" : MyInsCompl()
+function! MyInsCompl()
+  let c = nr2char(getchar())
+  if c == "l"
+    return "\<C-x>\<C-l>"
+  elseif c == "n"
+    return "\<C-x>\<C-n>"
+  elseif c == "p"
+    return "\<C-x>\<C-p>"
+  elseif c == "k"
+    return "\<C-x>\<C-k>"
+  elseif c == "t"
+    return "\<C-x>\<C-t>"
+  elseif c == "i"
+    return "\<C-x>\<C-i>"
+  elseif c == "]"
+    return "\<C-x>\<C-]>"
+  elseif c == "f"
+    return "\<C-x>\<C-f>"
+  elseif c == "d"
+    return "\<C-x>\<C-d>"
+  elseif c == "v"
+    return "\<C-x>\<C-v>"
+  elseif c == "u"
+    return "\<C-x>\<C-u>"
+  elseif c == "o"
+    return "\<C-x>\<C-o>"
+  elseif c == "s"
+    return "\<C-x>s"
+  endif
+  return "\<Tab>"
+endfunction
+
 " termdebegを使えるようにする
 packadd termdebug
 
@@ -107,4 +141,4 @@ set runtimepath+=~/workspace/Weather.vim
 "set runtimepath+=~/vim-amake
 set runtimepath+=~/Tweet.vim
 set runtimepath+=~/commentout.vim
-set runtimepath+=~/latex.vim
+set runtimepath+=~/myplugin/latex.vim
