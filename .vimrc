@@ -51,9 +51,9 @@ let mapleader = "\<Space>"
 nnoremap <Leader>t :terminal<CR>
 
 "スペース + v でターミナル起動"
-nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>v :Vexplore!<CR>
 
-nnoremap <Leader>s :split<CR>
+nnoremap <Leader>s :Hexplore<CR>
 
 "ウインドウ移動ショートカットをswに当てる"
 nnoremap sw <C-w>w
@@ -93,6 +93,8 @@ function Indent()
     call setpos('.', save_cursor)
 endfunction
 command -nargs=0 Indent call Indent()
+
+" termdebegを使えるようにする
 packadd termdebug
 
 " ---- setting custom plugins ------- "
@@ -105,3 +107,4 @@ set runtimepath+=~/workspace/Weather.vim
 "set runtimepath+=~/vim-amake
 set runtimepath+=~/Tweet.vim
 set runtimepath+=~/commentout.vim
+set runtimepath+=~/latex.vim
