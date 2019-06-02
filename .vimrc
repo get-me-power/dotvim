@@ -93,7 +93,7 @@ function Indent()
     call setpos('.', save_cursor)
 endfunction
 command -nargs=0 Indent call Indent()
-
+packadd termdebug
 
 " ---- setting custom plugins ------- "
 "set runtimepath+=~/Javasnippet.vim
