@@ -137,8 +137,10 @@ packadd termdebug
 "set runtimepath+=~/vim-zenspace
 "set runtimepath+=~/sweep_trail.vim
 "set runtimepath+=~/Timer.vim
-set runtimepath+=~/workspace/Weather.vim
+set runtimepath+=~/myplugin/Weather.vim
 "set runtimepath+=~/vim-amake
 set runtimepath+=~/Tweet.vim
-set runtimepath+=~/commentout.vim
+set runtimepath+=~/myplugin/commentout.vim
 set runtimepath+=~/myplugin/latex.vim
+set runtimepath+=~/myplugin/vimgon-quest-menu
+set runtimepath+=~/myplugin/vim-sl

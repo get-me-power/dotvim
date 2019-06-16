@@ -25,3 +25,6 @@
 [submodule "pack/mypackage/start/gruvbox"]
 	path = pack/mypackage/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "pack/mypackage/start/autofmt"]
+	path = pack/mypackage/start/autofmt
+	url = https://github.com/vim-jp/autofmt.git
