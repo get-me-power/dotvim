@@ -128,6 +128,9 @@ function! MyInsCompl()
   return "\<Tab>"
 endfunction
 
+" autofmtの設定
+set formatexpr=autofmt#japanese#formatexpr()
+
 " termdebegを使えるようにする
 packadd termdebug
 
