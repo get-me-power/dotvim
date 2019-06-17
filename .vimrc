@@ -137,6 +137,9 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
+" autofmtの設定
+set formatexpr=autofmt#japanese#formatexpr()
+
 " termdebegを使えるようにする
 packadd termdebug
 
