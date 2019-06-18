@@ -2,7 +2,7 @@ syntax enable
 filetype plugin indent on
 
 "backgroundを暗い色に設定"
-set background=dark
+	set background=dark
 
 "colorschemeをgruvboxに設定
 colorscheme gruvbox
@@ -36,6 +36,7 @@ set noswapfile
 set hlsearch
 
 "TABキーを押した際にタブ文字の代わりにスペースを入れる,スペースのサイズは四文字"
+" 本当の<Tab>を使うには、CTRL-V<Tab>
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -73,7 +74,6 @@ let g:lightline = {
 
 "shellのキーバインド設定"
 tnoremap <silent> <ESC> <C-\><C-n>
-
 "検索ハイライトの設定"
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
@@ -97,36 +97,45 @@ command -nargs=0 Indent call Indent()
 " 補完コマンドの再設定
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : MyInsCompl()
 function! MyInsCompl()
-  let c = nr2char(getchar())
-  if c == "l"
-    return "\<C-x>\<C-l>"
-  elseif c == "n"
-    return "\<C-x>\<C-n>"
-  elseif c == "p"
-    return "\<C-x>\<C-p>"
-  elseif c == "k"
-    return "\<C-x>\<C-k>"
-  elseif c == "t"
-    return "\<C-x>\<C-t>"
-  elseif c == "i"
-    return "\<C-x>\<C-i>"
-  elseif c == "]"
-    return "\<C-x>\<C-]>"
-  elseif c == "f"
-    return "\<C-x>\<C-f>"
-  elseif c == "d"
-    return "\<C-x>\<C-d>"
-  elseif c == "v"
-    return "\<C-x>\<C-v>"
-  elseif c == "u"
-    return "\<C-x>\<C-u>"
-  elseif c == "o"
-    return "\<C-x>\<C-o>"
-  elseif c == "s"
-    return "\<C-x>s"
-  endif
-  return "\<Tab>"
+    let c = nr2char(getchar())
+    if c == "l"
+        return "\<C-x>\<C-l>"
+    elseif c == "n"
+        return "\<C-x>\<C-n>"
+    elseif c == "p"
+        return "\<C-x>\<C-p>"
+    elseif c == "k"
+        return "\<C-x>\<C-k>"
+    elseif c == "t"
+        return "\<C-x>\<C-t>"
+    elseif c == "i"
+        return "\<C-x>\<C-i>"
+    elseif c == "]"
+        return "\<C-x>\<C-]>"
+    elseif c == "f"
+        return "\<C-x>\<C-f>"
+    elseif c == "d"
+        return "\<C-x>\<C-d>"
+    elseif c == "v"
+        return "\<C-x>\<C-v>"
+    elseif c == "u"
+        return "\<C-x>\<C-u>"
+    elseif c == "o"
+        return "\<C-x>\<C-o>"
+    elseif c == "s"
+        return "\<C-x>s"
+    endif
+    return "\<Tab>"
 endfunction
+
+"言語別にインデントを分ける"
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
 
 " autofmtの設定
 set formatexpr=autofmt#japanese#formatexpr()
