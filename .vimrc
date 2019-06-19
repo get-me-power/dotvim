@@ -2,7 +2,7 @@ syntax enable
 filetype plugin indent on
 
 "backgroundを暗い色に設定"
-	set background=dark
+set background=dark
 
 "colorschemeをgruvboxに設定
 colorscheme gruvbox
