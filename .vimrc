@@ -2,7 +2,7 @@ syntax enable
 filetype plugin indent on
 
 "backgroundを暗い色に設定"
-	set background=dark
+set background=dark
 
 "colorschemeをgruvboxに設定
 colorscheme gruvbox
@@ -61,6 +61,9 @@ nnoremap sw <C-w>w
 
 "lightlineの設定"
 set laststatus=2
+
+"シーケンスの遅延を解消
+set ttimeoutlen=10
 
 let g:lightline = {
             \ 'active': {
