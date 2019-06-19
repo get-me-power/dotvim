@@ -62,6 +62,9 @@ nnoremap sw <C-w>w
 "lightlineの設定"
 set laststatus=2
 
+"シーケンスの遅延を解消
+set ttimeoutlen=10
+
 let g:lightline = {
             \ 'active': {
             \   'left': [ [ 'mode', 'paste'],
