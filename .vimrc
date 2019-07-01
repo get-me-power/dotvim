@@ -138,6 +138,8 @@ endfunction
 function PluginUpdate() abort
     cd ~/dotfiles
     !git submodule foreach git pull origin master
+    !git commit -a -m "update plugin"
+    !git push origin master
     try
         cd %:h
     catch /^Vim\%((\a\+)\)\=:E499:/
