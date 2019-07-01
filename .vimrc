@@ -166,7 +166,7 @@ let java_allow_cpp_keywords=1
 
 " termdebegを使えるようにする
 function! OnTermdebug() abort
-    if exists('gdb')
+    if executable('gdb')
         packadd termdebug
     else
         echo 'gdb is not found'
