@@ -28,6 +28,3 @@
 [submodule "pack/mypackage/start/autofmt"]
 	path = pack/mypackage/start/autofmt
 	url = https://github.com/vim-jp/autofmt.git
-[submodule "pack/mypackage/start/indentLine"]
-	path = pack/mypackage/start/indentLine
-	url = https://github.com/Yggdroot/indentLine.git
