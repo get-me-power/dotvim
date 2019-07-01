@@ -47,6 +47,9 @@ set mouse=a
 "起動するシェルの設定"
 set sh=zsh
 
+"modeを非表示にする
+set noshowmode
+
 "スペース + tでターミナル起動"
 let mapleader = "\<Space>"
 nnoremap <Leader>t :terminal<CR>
