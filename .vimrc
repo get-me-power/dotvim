@@ -165,7 +165,14 @@ let java_highlight_functions="style"
 let java_allow_cpp_keywords=1
 
 " termdebegを使えるようにする
-" packadd termdebug
+function! OnTermdebug() abort
+    if exists('gdb')
+        packadd termdebug
+    else
+        echo 'gdb is not found'
+    endif
+endfunction
+command -nargs=0 OnTermdebug call OnTermdebug()
 
 " ---- setting custom plugins ------- "
 "set runtimepath+=~/Javasnippet.vim
