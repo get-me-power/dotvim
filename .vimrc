@@ -134,6 +134,12 @@ function! MyInsCompl()
     return "\<Tab>"
 endfunction
 
+"--------plugin update command---------"
+function PluginUpdate() abort
+    !git submodule foreach git pull origin master
+endfunction
+command -nargs=0 PluginUpdate call PluginUpdate()
+
 "言語別にインデントを分ける"
 augroup fileTypeIndent
     autocmd!
@@ -168,4 +174,3 @@ set runtimepath+=~/myplugin/latex.vim
 set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-sl
 set runtimepath+=~/myplugin/Weather.vim
-
