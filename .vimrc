@@ -136,6 +136,7 @@ endfunction
 
 "--------plugin update command---------"
 function PluginUpdate() abort
+    cd ~/dotfiles
     !git submodule foreach git pull origin master
 endfunction
 command -nargs=0 PluginUpdate call PluginUpdate()
