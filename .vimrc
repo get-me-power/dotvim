@@ -138,6 +138,12 @@ endfunction
 function PluginUpdate() abort
     cd ~/dotfiles
     !git submodule foreach git pull origin master
+    try
+        cd %:h
+    catch /^Vim\%((\a\+)\)\=:E499:/
+        echo 'buffer is empty'
+        cd
+    endtry
 endfunction
 command -nargs=0 PluginUpdate call PluginUpdate()
 
