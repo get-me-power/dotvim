@@ -143,8 +143,13 @@ augroup END
 " autofmtの設定
 set formatexpr=autofmt#japanese#formatexpr()
 
+" javaのsyntaxの設定
+let java_highlight_all=1
+let java_highlight_functions="style"
+let java_allow_cpp_keywords=1
+
 " termdebegを使えるようにする
-packadd termdebug
+" packadd termdebug
 
 " ---- setting custom plugins ------- "
 "set runtimepath+=~/Javasnippet.vim
@@ -154,8 +159,10 @@ packadd termdebug
 "set runtimepath+=~/Timer.vim
 set runtimepath+=~/myplugin/Weather.vim
 "set runtimepath+=~/vim-amake
-set runtimepath+=~/Tweet.vim
+set runtimepath+=~/myplugin/Tweet.vim
 set runtimepath+=~/myplugin/commentout.vim
 set runtimepath+=~/myplugin/latex.vim
 set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-sl
+set runtimepath+=~/myplugin/Weather.vim
+
