@@ -28,3 +28,6 @@
 [submodule "pack/mypackage/start/autofmt"]
 	path = pack/mypackage/start/autofmt
 	url = https://github.com/vim-jp/autofmt.git
+[submodule "pack/mypackage/start/vim-quickrun"]
+	path = pack/mypackage/start/vim-quickrun
+	url = https://github.com/thinca/vim-quickrun.git
