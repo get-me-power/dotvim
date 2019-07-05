@@ -31,3 +31,6 @@
 [submodule "pack/mypackage/start/vim-quickrun"]
 	path = pack/mypackage/start/vim-quickrun
 	url = https://github.com/thinca/vim-quickrun.git
+[submodule "pack/mypackage/start/vim-gotham"]
+	path = pack/mypackage/start/vim-gotham
+	url = https://github.com/whatyouhide/vim-gotham.git
