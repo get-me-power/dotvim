@@ -71,7 +71,7 @@ set laststatus=2
 set ttimeoutlen=10
 
 let g:lightline = {
-            \ 'colorscheme': 'default',
+            \ 'colorscheme': 'gotham256',
             \ 'active': {
             \   'left': [ [ 'mode', 'paste'],
             \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
