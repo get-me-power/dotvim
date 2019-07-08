@@ -103,10 +103,10 @@ tnoremap <silent> <ESC> <C-\><C-n>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 "hjkl縛り"
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+noremap! <Up> <Nop>
+noremap! <Down> <Nop>
+noremap! <Left> <Nop>
+noremap! <Right> <Nop>
 
 "helpを日本語化"
 set helplang=ja,en
