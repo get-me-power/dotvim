@@ -54,6 +54,13 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+" コマンドラインモードの補完をカスタマイズ
+set wildmenu
+set wildmode=full
+
+" 履歴の記録を増やす
+set history=200
+
 "マウスを有効"
 if has('mouse')
   set mouse=a
