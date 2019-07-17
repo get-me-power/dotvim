@@ -179,6 +179,7 @@ augroup fileTypeIndent
   autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd BufReadPre *.org packadd vim-orgmode
 augroup END
 
 " autofmtの設定
