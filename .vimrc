@@ -18,6 +18,9 @@ set runtimepath+=~/myplugin/vim-sl
 syntax enable
 filetype plugin indent on
 
+set autoindent
+set smartindent
+
 "backgroundを暗い色に設定"
 set background=dark
 
@@ -49,10 +52,16 @@ set noswapfile
 set hlsearch
 
 "TABキーを押した際にタブ文字の代わりにスペースを入れる,スペースのサイズは四文字"
-" 本当の<Tab>を使うには、CTRL-V<Tab>
 set expandtab
 set tabstop=4
 set shiftwidth=4
+
+" コマンドラインモードの補完をカスタマイズ
+set wildmenu
+set wildmode=full
+
+" 履歴の記録を増やす
+set history=200
 
 "マウスを有効"
 if has('mouse')

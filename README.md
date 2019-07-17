@@ -1,5 +1,11 @@
 # This repository is vim config file
 
+## update repo
+```
+git pull
+git submodule update --init --recursive
+```
+
 ## update plugin's command
 
 do this command
