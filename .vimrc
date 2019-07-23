@@ -13,7 +13,7 @@ set runtimepath+=~/myplugin/Tweet.vim
 set runtimepath+=~/myplugin/commentout.vim
 set runtimepath+=~/myplugin/latex.vim
 set runtimepath+=~/myplugin/vimgon-quest-menu
-set runtimepath+=~/myplugin/vim-sl
+set runtimepath+=~/myplugin/vim-starwars
 
 syntax enable
 filetype plugin indent on
