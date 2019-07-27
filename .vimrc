@@ -194,6 +194,7 @@ let g:java_allow_cpp_keywords=1
 function! OnTermdebug() abort
   if executable('gdb')
     packadd termdebug
+    :Termdebug
   else
     echo 'gdb is not found'
   endif
