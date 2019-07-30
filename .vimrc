@@ -34,6 +34,7 @@ set number
 set nobackup
 
 "バックスペースの問題を解消"
+" :h 'backspace'
 set backspace=indent,eol,start
 
 "行末の1文字先までカーソルを移動可能に"
