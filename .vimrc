@@ -169,7 +169,9 @@ endfunction
 
 "--------plugin update command---------"
 function PluginUpdate() abort
-  !git -C ~/dotfiles submodule foreach git  pull origin master
+  if has('mac') || has('unix')
+    !git -C ~/dotfiles submodule foreach git  pull origin master
+  endif
 endfunction
 command -nargs=0 PluginUpdate call PluginUpdate()
 
