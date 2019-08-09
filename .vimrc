@@ -169,7 +169,7 @@ endfunction
 
 "--------plugin update command---------"
 function PluginUpdate() abort
-  if has('mac') || has('unix')
+  if has('mac') || has('linux')
     !git -C ~/dotfiles submodule foreach git  pull origin master
   endif
 endfunction
@@ -182,6 +182,7 @@ augroup fileTypeIndent
   autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufReadPre *.org packadd vim-orgmode
 augroup END
 
@@ -203,3 +204,4 @@ function! OnTermdebug() abort
   endif
 endfunction
 command -nargs=0 OnTermdebug call OnTermdebug()
+
