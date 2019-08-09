@@ -31,9 +31,12 @@ else
         echo 'start build vim OK? [yes/no]'
         read answer
         if [ "$answer" == "yes" ]; then
-            ./configure --with-features=huge\
-                --enable-gui=gtk2 --enable-perlinterp --enable-pythoninterp\
-                --enable-python3interp --enable-rubyinterp --enable-luainterp\
+            ./configure \
+                --with-features=huge \
+                --enable-perlinterp \
+                --enable-pythoninterp \
+                --enable-python3interp \
+                --enable-rubyinterp \
                 --enable-fail-if-missing
 
             sudo make
