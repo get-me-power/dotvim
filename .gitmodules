@@ -40,3 +40,6 @@
 [submodule "pack/mypackage/start/vim-speeddating"]
 	path = pack/mypackage/start/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
+[submodule "pack/mypackage/start/gina.vim"]
+	path = pack/mypackage/start/gina.vim
+	url = https://github.com/lambdalisue/gina.vim.git
