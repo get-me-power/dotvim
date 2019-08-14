@@ -204,4 +204,3 @@ function! OnTermdebug() abort
   endif
 endfunction
 command -nargs=0 OnTermdebug call OnTermdebug()
-
