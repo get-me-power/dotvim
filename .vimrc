@@ -204,3 +204,21 @@ function! OnTermdebug() abort
   endif
 endfunction
 command -nargs=0 OnTermdebug call OnTermdebug()
+
+"---setting vim-lsp---------
+
+if executable('pyls')
+  " pip install python-language-server
+  au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necovim#get_source_options({
+      \ 'name': 'necovim',
+      \ 'whitelist': ['vim'],
+      \ 'completor': function('asyncomplete#sources#necovim#completor'),
+      \ }))
+setlocal omnifunc=lsp#complete

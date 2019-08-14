@@ -43,3 +43,21 @@
 [submodule "pack/mypackage/start/gina.vim"]
 	path = pack/mypackage/start/gina.vim
 	url = https://github.com/lambdalisue/gina.vim.git
+[submodule "pack/mypackage/start/vim-lsp"]
+	path = pack/mypackage/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp
+[submodule "pack/mypackage/start/async.vim"]
+	path = pack/mypackage/start/async.vim
+	url = https://github.com/prabirshrestha/async.vim
+[submodule "pack/mypackage/start/asyncomplete-lsp.vim"]
+	path = pack/mypackage/start/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim
+[submodule "pack/mypackage/start/asyncomplete.vim"]
+	path = pack/mypackage/start/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim
+[submodule "pack/mypackage/start/neco-vim"]
+	path = pack/mypackage/start/neco-vim
+	url = https://github.com/Shougo/neco-vim
+[submodule "pack/mypackage/start/asyncomplete-necovim.vim"]
+	path = pack/mypackage/start/asyncomplete-necovim.vim
+	url = https://github.com/prabirshrestha/asyncomplete-necovim.vim
