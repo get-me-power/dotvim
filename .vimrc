@@ -205,7 +205,7 @@ function! OnTermdebug() abort
 endfunction
 command -nargs=0 OnTermdebug call OnTermdebug()
 
-"---setting vim-lsp---------
+" ---setting vim-lsp---------
 
 if executable('pyls')
   " pip install python-language-server
@@ -217,12 +217,34 @@ if executable('pyls')
 endif
 
 if executable('solargraph') && has('linux')
-    " gem install solargraph
-    au User lsp_setup call lsp#register_server({
+  " gem install solargraph
+  au User lsp_setup call lsp#register_server({
         \ 'name': 'solargraph',
         \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
         \ 'initialization_options': {"diagnostics": "true"},
-        \ 'whitelist': ['ruby'],
+        \ 'whitelist': ['ruby'],})
+endif
+
+if executable('gopls')
+  augroup LspGo
+    au!
+    autocmd User lsp_setup call lsp#register_server({
+          \ 'name': 'go-lang',
+          \ 'cmd': {server_info->['gopls']},
+          \ 'whitelist': ['go'],
+          \ })
+    autocmd FileType go setlocal omnifunc=lsp#complete
+    autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+    autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+    autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+  augroup END
+endif
+
+if executable('clangd')
+  au User lsp_setup call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd', '-background-index']},
+        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
         \ })
 endif
 
@@ -231,4 +253,5 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
       \ 'whitelist': ['vim'],
       \ 'completor': function('asyncomplete#sources#necovim#completor'),
       \ }))
+
 setlocal omnifunc=lsp#complete

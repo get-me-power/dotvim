@@ -1,5 +1,11 @@
 # This repository is vim config file
 
+## Requirement
+
+[gopls](https://github.com/golang/go/wiki/gopls)
+
+[pyls](https://github.com/palantir/python-language-server)
+
 ## update repo
 ```
 git pull
