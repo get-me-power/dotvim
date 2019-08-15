@@ -205,7 +205,7 @@ function! OnTermdebug() abort
 endfunction
 command -nargs=0 OnTermdebug call OnTermdebug()
 
-"---setting vim-lsp---------
+" ---setting vim-lsp---------
 
 if executable('pyls')
   " pip install python-language-server
@@ -216,9 +216,25 @@ if executable('pyls')
         \ })
 endif
 
+if executable('gopls')
+  augroup LspGo
+    au!
+    autocmd User lsp_setup call lsp#register_server({
+          \ 'name': 'go-lang',
+          \ 'cmd': {server_info->['gopls']},
+          \ 'whitelist': ['go'],
+          \ })
+    autocmd FileType go setlocal omnifunc=lsp#complete
+    autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+    autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+    autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+  augroup END
+endif
+
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necovim#get_source_options({
       \ 'name': 'necovim',
       \ 'whitelist': ['vim'],
       \ 'completor': function('asyncomplete#sources#necovim#completor'),
       \ }))
+
 setlocal omnifunc=lsp#complete
