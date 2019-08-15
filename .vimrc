@@ -216,7 +216,7 @@ if executable('pyls')
         \ })
 endif
 
-if executable('solargraph') && has('linux')
+if executable('solargraph')
   " gem install solargraph
   au User lsp_setup call lsp#register_server({
         \ 'name': 'solargraph',
