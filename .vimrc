@@ -231,6 +231,14 @@ if executable('gopls')
   augroup END
 endif
 
+if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd', '-background-index']},
+        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+        \ })
+endif
+
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necovim#get_source_options({
       \ 'name': 'necovim',
       \ 'whitelist': ['vim'],
