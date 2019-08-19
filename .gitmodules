@@ -61,3 +61,6 @@
 [submodule "pack/mypackage/start/asyncomplete-necovim.vim"]
 	path = pack/mypackage/start/asyncomplete-necovim.vim
 	url = https://github.com/prabirshrestha/asyncomplete-necovim.vim
+[submodule "pack/mypackage/opt/ale"]
+	path = pack/mypackage/opt/ale
+	url = https://github.com/dense-analysis/ale.git
