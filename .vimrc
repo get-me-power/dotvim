@@ -11,7 +11,7 @@ set runtimepath+=~/myplugin/Weather.vim
 "set runtimepath+=~/vim-amake
 set runtimepath+=~/myplugin/Tweet.vim
 set runtimepath+=~/myplugin/commentout.vim
-set runtimepath+=~/myplugin/latex.vim
+"set runtimepath+=~/myplugin/latex.vim
 set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-starwars
 
@@ -176,7 +176,7 @@ endfunction
 command -nargs=0 PluginUpdate call PluginUpdate()
 
 "言語別にインデントを分ける"
-augroup fileTypeIndent
+augroup fileTypeEvent
   autocmd!
   autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4
   autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -184,6 +184,7 @@ augroup fileTypeIndent
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim packadd ale
   autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType markdown colorscheme gotham
   autocmd BufReadPre *.org packadd vim-orgmode
 augroup END
 
