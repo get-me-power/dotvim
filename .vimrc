@@ -77,9 +77,9 @@ let mapleader = "\<Space>"
 nnoremap <Leader>t :terminal<CR>
 
 "スペース + v でターミナル起動"
-nnoremap <Leader>v :Vexplore!<CR>
+nnoremap <Leader>v :vsplit<CR>
 
-nnoremap <Leader>s :Hexplore<CR>
+nnoremap <Leader>s :split<CR>
 
 "ウインドウ移動ショートカットをswに当てる"
 nnoremap sw <C-w>w
