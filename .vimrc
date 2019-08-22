@@ -8,6 +8,7 @@ scriptencoding utf-8
 "set runtimepath+=~/sweep_trail.vim
 "set runtimepath+=~/Timer.vim
 set runtimepath+=~/myplugin/Weather.vim
+"set runtimepath+=~/gina.vim
 "set runtimepath+=~/vim-amake
 set runtimepath+=~/myplugin/Tweet.vim
 set runtimepath+=~/myplugin/commentout.vim
@@ -257,3 +258,5 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
       \ }))
 
 setlocal omnifunc=lsp#complete
+
+call gina#custom#command#option('status', '--opener', 'vsplit')

@@ -61,3 +61,6 @@
 [submodule "pack/mypackage/opt/ale"]
 	path = pack/mypackage/opt/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "pack/mypackage/start/gina.vim"]
+	path = pack/mypackage/start/gina.vim
+	url = https://github.com/lambdalisue/gina.vim.git
