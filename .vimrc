@@ -11,9 +11,9 @@ set runtimepath+=~/myplugin/Weather.vim
 "set runtimepath+=~/vim-amake
 set runtimepath+=~/myplugin/Tweet.vim
 set runtimepath+=~/myplugin/commentout.vim
-"set runtimepath+=~/myplugin/latex.vim
 set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-starwars
+set runtimepath+=~/myplugin/vim-webapp
 
 syntax enable
 filetype plugin indent on
@@ -259,3 +259,4 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
 setlocal omnifunc=lsp#complete
 packadd gina.vim
 call gina#custom#command#option('status', '--opener', 'vsplit')
+call gina#custom#command#option('diff', '--opener', 'vsplit')
