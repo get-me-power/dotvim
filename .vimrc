@@ -176,7 +176,7 @@ endfunction
 command -nargs=0 PluginUpdate call PluginUpdate()
 
 "言語別にインデントを分ける"
-augroup fileTypeEvent
+augroup MyFileTypeEvent
   autocmd!
   autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4
   autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -184,7 +184,6 @@ augroup fileTypeEvent
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim packadd ale
   autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd FileType markdown colorscheme gotham
   autocmd BufReadPre *.org packadd vim-orgmode
 augroup END
 
