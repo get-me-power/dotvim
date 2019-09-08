@@ -195,16 +195,16 @@ let g:java_highlight_all=1
 let g:java_highlight_functions="style"
 let g:java_allow_cpp_keywords=1
 
-"" termdebegを使えるようにする
-"function! OnTermdebug() abort
-"  if executable('gdb')
-"    packadd termdebug
-"    :Termdebug
-"  else
-"    echo 'gdb is not found'
-"  endif
-"endfunction
-"command -nargs=0 OnTermdebug call OnTermdebug()
+" termdebegを使えるようにする
+function! OnTermdebug() abort
+  if executable('gdb')
+    packadd termdebug
+    :Termdebug
+  else
+    echo 'gdb is not found'
+  endif
+endfunction
+command -nargs=0 OnTermdebug call OnTermdebug()
 
 " ---setting vim-lsp---------
 
