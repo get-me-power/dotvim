@@ -257,6 +257,8 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
       \ }))
 
 setlocal omnifunc=lsp#complete
+
+" ----setting gina.vim
 packadd gina.vim
 call gina#custom#command#option('status', '--opener', 'vsplit')
 call gina#custom#command#option('diff', '--opener', 'vsplit')
