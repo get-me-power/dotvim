@@ -260,5 +260,6 @@ setlocal omnifunc=lsp#complete
 
 " ----setting gina.vim
 packadd gina.vim
+
 call gina#custom#command#option('status', '--opener', 'vsplit')
 call gina#custom#command#option('diff', '--opener', 'vsplit')
