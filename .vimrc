@@ -14,7 +14,7 @@ set runtimepath+=~/myplugin/commentout.vim
 set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-starwars
 set runtimepath+=~/myplugin/vim-sl
-set runtimepath+=~/myplugin/PlayMusic.vim
+" set runtimepath+=~/myplugin/PlayMusic.vim
 
 syntax enable
 filetype plugin indent on
