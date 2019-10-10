@@ -64,3 +64,6 @@
 [submodule "pack/mypackage/opt/gina.vim"]
 	path = pack/mypackage/opt/gina.vim
 	url = https://github.com/lambdalisue/gina.vim.git
+[submodule "pack/mypackage/start/fzf.vim"]
+	path = pack/mypackage/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
