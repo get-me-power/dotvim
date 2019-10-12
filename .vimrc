@@ -255,7 +255,7 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
       \ 'whitelist': ['vim'],
       \ 'completor': function('asyncomplete#sources#necovim#completor'),
       \ }))
-
+let g:lsp_diagnostics_echo_cursor = 1
 setlocal omnifunc=lsp#complete
 
 " ----setting gina.vim
