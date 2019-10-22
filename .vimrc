@@ -14,10 +14,14 @@ set runtimepath+=~/myplugin/commentout.vim
 set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-starwars
 set runtimepath+=~/myplugin/vim-sl
-" set runtimepath+=~/myplugin/PlayMusic.vim
+set runtimepath+=~/myplugin/PlayMusic.vim
 
 " setting fzf
-set rtp+=/usr/local/opt/fzf
+if has('mac')
+  set rtp+=/usr/local/opt/fzf
+else
+  set rtp+=~/.fzf
+endif
 
 syntax enable
 filetype plugin indent on
@@ -96,17 +100,6 @@ set laststatus=2
 
 "シーケンスの遅延を解消
 set ttimeoutlen=10
-
-let g:lightline = {
-      \ 'colorscheme': 'gotham256',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste'],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
-      \ },
-      \ }
 
 "--------setting vim-quickrun------------"
 "
@@ -274,9 +267,9 @@ call gina#custom#command#option('diff', '--opener', 'vsplit')
 
 " This is the default extra key bindings
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-x': 'split',
+      \ 'ctrl-v': 'vsplit' }
 
 " Default fzf layout
 " - down / up / left / right
@@ -289,19 +282,19 @@ let g:fzf_layout = { 'window': '10new' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+      \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
 
 " Enable per-command history.
 " CTRL-N and CTRL-P will be automatically bound to next-history and

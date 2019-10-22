@@ -1,6 +1,3 @@
-[submodule "pack/mypackage/start/lightline.vim"]
-	path = pack/mypackage/start/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
 [submodule "pack/mypackage/start/vim-gitbranch"]
 	path = pack/mypackage/start/vim-gitbranch
 	url = https://github.com/itchyny/vim-gitbranch.git
@@ -67,3 +64,6 @@
 [submodule "pack/mypackage/start/fzf.vim"]
 	path = pack/mypackage/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "pack/mypackage/start/vim-airline"]
+	path = pack/mypackage/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
