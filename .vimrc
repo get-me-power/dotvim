@@ -10,8 +10,8 @@ scriptencoding utf-8
 set runtimepath+=~/myplugin/Weather.vim
 "set runtimepath+=~/vim-amake
 set runtimepath+=~/myplugin/Tweet.vim
-set runtimepath+=~/myplugin/commentout.vim
-set runtimepath+=~/myplugin/vimgon-quest-menu
+" set runtimepath+=~/myplugin/commentout.vim
+" set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-starwars
 set runtimepath+=~/myplugin/vim-sl
 set runtimepath+=~/myplugin/PlayMusic.vim
@@ -92,14 +92,51 @@ nnoremap <Leader>v :vsplit<CR>
 
 nnoremap <Leader>s :split<CR>
 
+nnoremap <Leader>f :FZF<CR>
+
 "ウインドウ移動ショートカットをswに当てる"
 nnoremap sw <C-w>w
 
-"---------setting lightline.vim-----------"
+"---------setting vim-airline-----------"
 set laststatus=2
 
 "シーケンスの遅延を解消
 set ttimeoutlen=10
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
+let g:airline#extensions#term#enabled = 0
+let g:airline_theme = 'dark'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
 
 "--------setting vim-quickrun------------"
 "
