@@ -1,6 +1,3 @@
-[submodule "pack/mypackage/start/vim-gitbranch"]
-	path = pack/mypackage/start/vim-gitbranch
-	url = https://github.com/itchyny/vim-gitbranch.git
 [submodule "pack/mypackage/start/vimdoc-ja"]
 	path = pack/mypackage/start/vimdoc-ja
 	url = https://github.com/vim-jp/vimdoc-ja.git
