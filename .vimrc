@@ -14,7 +14,7 @@ set runtimepath+=~/myplugin/Tweet.vim
 " set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-starwars
 set runtimepath+=~/myplugin/vim-sl
-set runtimepath+=~/myplugin/PlayMusic.vim
+" set runtimepath+=~/myplugin/PlayMusic.vim
 
 " setting fzf
 if has('mac')
@@ -296,9 +296,6 @@ setlocal omnifunc=lsp#complete
 
 " ----setting gina.vim
 packadd gina.vim
-
-call gina#custom#command#option('status', '--opener', 'vsplit')
-call gina#custom#command#option('diff', '--opener', 'vsplit')
 
 " --------setting fzf.vim
 
