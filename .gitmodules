@@ -67,3 +67,6 @@
 [submodule "pack/mypackage/start/vim-fugitive"]
 	path = pack/mypackage/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/mypackage/start/vim-devicons"]
+	path = pack/mypackage/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons.git
