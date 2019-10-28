@@ -28,6 +28,7 @@ filetype plugin indent on
 
 " テキストの折返しをするかどうか...
 " set nowrap
+let g:csv_delim=','
 
 set autoindent
 set smartindent
