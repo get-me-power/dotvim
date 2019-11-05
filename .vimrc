@@ -151,8 +151,8 @@ tnoremap <silent> <ESC> <C-\><C-n>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 "hjkl縛り"
-noremap <Up> <Nop>
-noremap <Down> <Nop>
+nnoremap <Up> :Gina status<CR>
+noremap <Down> :Gina commit<CR>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 noremap! <Up> <Nop>
