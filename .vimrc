@@ -88,7 +88,7 @@ set noshowmode
 let mapleader = "\<Space>"
 nnoremap <Leader>t :terminal<CR>
 
-"スペース + v でターミナル起動"
+"スペース + v で垂直分割"
 nnoremap <Leader>v :vsplit<CR>
 
 nnoremap <Leader>s :split<CR>
