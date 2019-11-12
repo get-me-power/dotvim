@@ -153,7 +153,7 @@ nnoremap <ESC><ESC> :nohlsearch<CR>
 "hjkl縛り"
 nnoremap <Up> :Gina status<CR>
 nnoremap <Down> :Gina commit<CR>
-noremap <Left> <Nop>
+nnoremap <Left> :Gina diff<CR>
 noremap <Right> <Nop>
 noremap! <Up> <Nop>
 noremap! <Down> <Nop>
