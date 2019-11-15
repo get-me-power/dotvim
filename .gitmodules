@@ -70,6 +70,3 @@
 [submodule "pack/mypackage/start/vim-devicons"]
 	path = pack/mypackage/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
-[submodule "pack/mypackage/opt/nerdtree"]
-	path = pack/mypackage/opt/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
