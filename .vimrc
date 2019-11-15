@@ -14,6 +14,7 @@ set runtimepath+=~/myplugin/Tweet.vim
 " set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-starwars
 set runtimepath+=~/myplugin/vim-sl
+" set runtimepath+=~/myplugin/nerdtree
 " set runtimepath+=~/myplugin/PlayMusic.vim
 
 " setting fzf
@@ -139,8 +140,8 @@ let g:airline_symbols.linenr = ''
 let g:airline_right_sep = '⮂'
 let g:airline_right_alt_sep = '⮃'
 
-"--------setting vim-quickrun------------"
-"
+"--------setting vim-quickrun------------
+
 if !exists("g:quickrun_config")
   let g:quickrun_config = {}
 endif
@@ -297,13 +298,6 @@ setlocal omnifunc=lsp#complete
 
 " ----setting gina.vim
 packadd gina.vim
-
-" ----settng NERDTree
-function! NERDTreeLoad() abort
-  packadd nerdtree
-  :NERDTree
-endfunction
-command -nargs=0 LoadNERDTree call NERDTreeLoad()
 
 " --------setting fzf.vim
 
