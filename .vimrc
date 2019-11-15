@@ -298,6 +298,13 @@ setlocal omnifunc=lsp#complete
 " ----setting gina.vim
 packadd gina.vim
 
+" ----settng NERDTree
+function! NERDTreeLoad() abort
+  packadd nerdtree
+  :NERDTree
+endfunction
+command -nargs=0 LoadNERDTree call NERDTreeLoad()
+
 " --------setting fzf.vim
 
 " This is the default extra key bindings
