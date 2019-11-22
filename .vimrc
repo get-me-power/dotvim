@@ -299,6 +299,14 @@ setlocal omnifunc=lsp#complete
 " ----setting gina.vim
 packadd gina.vim
 
+" setting devicons
+
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+
+let g:DevIconsDefaultFolderOpenSymbol='' " symbol for open folder (f07c)
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol='' " symbol for closed folder (f07b)
+
 " --------setting fzf.vim
 
 " This is the default extra key bindings
