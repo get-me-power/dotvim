@@ -70,6 +70,6 @@
 [submodule "pack/mypackage/start/vim-devicons"]
 	path = pack/mypackage/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
-[submodule "pack/mypackage/start/nerdtree"]
-	path = pack/mypackage/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/mypackage/start/vim-airline-themes"]
+	path = pack/mypackage/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
