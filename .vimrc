@@ -14,6 +14,7 @@ set runtimepath+=~/myplugin/Tweet.vim
 " set runtimepath+=~/myplugin/vimgon-quest-menu
 set runtimepath+=~/myplugin/vim-starwars
 set runtimepath+=~/myplugin/vim-sl
+set runtimepath+=~/myplugin/vim
 " set runtimepath+=~/myplugin/PlayMusic.vim
 
 " setting fzf
@@ -38,6 +39,10 @@ set background=dark
 
 "colorschemeをgruvboxに設定
 colorscheme gruvbox
+
+if has('termguicolors')
+  set termguicolors
+endif
 
 "行番号を表示"
 set number
@@ -152,10 +157,14 @@ tnoremap <silent> <ESC> <C-\><C-n>
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 "hjkl縛り"
-noremap <Up> :Gina status<CR>
-noremap <Down> :Gina commit<CR>
-noremap <Left> :Gina diff<CR>
-noremap <Right> <Nop>
+" ----setting gina.vim
+packadd gina.vim
+if exists(':Gina')
+  noremap <Up> :Gina status<CR>
+  noremap <Down> :Gina commit<CR>
+  noremap <Left> :Gina diff<CR>
+  noremap <Right> <Nop>
+endif
 noremap! <Up> <Nop>
 noremap! <Down> <Nop>
 noremap! <Left> <Nop>
@@ -295,9 +304,6 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
       \ }))
 let g:lsp_diagnostics_echo_cursor = 1
 setlocal omnifunc=lsp#complete
-
-" ----setting gina.vim
-packadd gina.vim
 
 " setting devicons
 
