@@ -91,17 +91,36 @@ set noshowmode
 
 "スペース + tでターミナル起動"
 let mapleader = "\<Space>"
-nnoremap <Leader>t :terminal<CR>
 
-"スペース + v で垂直分割"
+noremap <Leader>t :terminal<CR>
 nnoremap <Leader>v :vsplit<CR>
-
 nnoremap <Leader>s :split<CR>
-
 nnoremap <Leader>f :FZF<CR>
 
 "ウインドウ移動ショートカットをswに当てる"
 nnoremap sw <C-w>w
+
+if has('terminal')
+  tnoremap <silent><C-u> <C-\><C-N>
+endif
+
+"検索ハイライトの設定"
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
+" ----setting gina.vim
+packadd gina.vim
+packadd gina.vim
+if exists(':Gina')
+  nnoremap <Up> :Gina status<CR>
+  nnoremap <Down> :Gina commit<CR>
+  nnoremap <Left> :Gina diff<CR>
+  nnoremap <Right> <Nop>
+endif
+noremap! <Up> <Nop>
+noremap! <Down> <Nop>
+noremap! <Left> <Nop>
+noremap! <Right> <Nop>
+
 
 "---------setting vim-airline-----------"
 set laststatus=2
@@ -150,25 +169,6 @@ let g:airline_right_alt_sep = '⮃'
 if !exists("g:quickrun_config")
   let g:quickrun_config = {}
 endif
-
-"shellのキーバインド設定"
-tnoremap <silent> <ESC> <C-\><C-n>
-"検索ハイライトの設定"
-nnoremap <ESC><ESC> :nohlsearch<CR>
-
-"hjkl縛り"
-" ----setting gina.vim
-packadd gina.vim
-if exists(':Gina')
-  noremap <Up> :Gina status<CR>
-  noremap <Down> :Gina commit<CR>
-  noremap <Left> :Gina diff<CR>
-  noremap <Right> <Nop>
-endif
-noremap! <Up> <Nop>
-noremap! <Down> <Nop>
-noremap! <Left> <Nop>
-noremap! <Right> <Nop>
 
 "helpを日本語化"
 set helplang=ja,en
