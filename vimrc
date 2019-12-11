@@ -253,6 +253,10 @@ function! OnTermdebug() abort
 endfunction
 command -nargs=0 OnTermdebug call OnTermdebug()
 
+if executable('ctags')
+  set tags=./tags;
+endif
+
 " ---setting vim-lsp---------
 
 if executable('pyls')
