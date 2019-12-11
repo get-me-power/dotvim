@@ -123,7 +123,6 @@ noremap! <Right> <Nop>
 
 
 "---------setting vim-airline-----------"
-set laststatus=2
 
 "シーケンスの遅延を解消
 set ttimeoutlen=10
