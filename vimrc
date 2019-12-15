@@ -109,7 +109,6 @@ nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " ----setting gina.vim
 packadd gina.vim
-packadd gina.vim
 if exists(':Gina')
   nnoremap <Up> :Gina status<CR>
   nnoremap <Down> :Gina commit<CR>
