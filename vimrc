@@ -132,6 +132,7 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline#extensions#term#enabled = 0
 let g:airline#extensions#nerdtree_statusline = 0
+let g:airline#extensions#whitespace#enabled = 0
 let g:airline_theme = 'dark'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
