@@ -17,10 +17,10 @@ set runtimepath+=~/myplugin/vim-sl
 set runtimepath+=~/myplugin/vim
 " set runtimepath+=~/myplugin/PlayMusic.vim
 
-" setting fzf
+" setting fzf's runtime
 if has('mac')
   set rtp+=/usr/local/opt/fzf
-else
+elseif has('linux')
   set rtp+=~/.fzf
 endif
 
@@ -120,8 +120,7 @@ noremap! <Down> <Nop>
 noremap! <Left> <Nop>
 noremap! <Right> <Nop>
 
-
-"---------setting vim-airline-----------"
+"---------setting vim-airline-----------
 
 "シーケンスの遅延を解消
 set ttimeoutlen=10
@@ -134,9 +133,11 @@ let g:airline#extensions#term#enabled = 0
 let g:airline#extensions#nerdtree_statusline = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_theme = 'dark'
+
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
@@ -214,7 +215,8 @@ function! MyInsCompl()
   return "\<Tab>"
 endfunction
 
-"--------plugin update command---------"
+"--------plugin update command---------
+
 function PluginUpdate() abort
   if has('mac') || has('linux')
     !git -C ~/.vim submodule foreach git pull origin master
@@ -222,7 +224,6 @@ function PluginUpdate() abort
 endfunction
 command -nargs=0 PluginUpdate call PluginUpdate()
 
-"言語別にインデントを分ける"
 augroup MyFileTypeEvent
   autocmd!
   autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4
@@ -234,7 +235,7 @@ augroup MyFileTypeEvent
   autocmd BufReadPre *.org packadd vim-orgmode
 augroup END
 
-" autofmtの設定
+" --------setting autofmt----------
 set formatexpr=autofmt#japanese#formatexpr()
 
 " javaのsyntaxの設定
@@ -242,7 +243,8 @@ let g:java_highlight_all=1
 let g:java_highlight_functions="style"
 let g:java_allow_cpp_keywords=1
 
-" termdebegを使えるようにする
+" ----------setting termdebeg-------
+
 function! OnTermdebug() abort
   if executable('gdb')
     packadd termdebug
@@ -308,15 +310,14 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
 let g:lsp_diagnostics_echo_cursor = 1
 setlocal omnifunc=lsp#complete
 
-" setting devicons
+" -------setting vim-devicons------------
 
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
+let g:DevIconsDefaultFolderOpenSymbol = '' " symbol for open folder (f07c)
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = '' " symbol for closed folder (f07b)
 
-let g:DevIconsDefaultFolderOpenSymbol='' " symbol for open folder (f07c)
-let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol='' " symbol for closed folder (f07b)
-
-" --------setting fzf.vim
+" --------setting fzf.vim----------
 
 " This is the default extra key bindings
 let g:fzf_action = {
@@ -355,7 +356,8 @@ let g:fzf_colors =
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-" setting previm
+" ----------setting previm-----------
+
 let g:vim_markdown_folding_disabled = 1
 let g:previm_enable_realtime = 1
 nnoremap <silent> <C-p> :PrevimOpen<CR>
