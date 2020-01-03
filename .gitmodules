@@ -73,3 +73,9 @@
 [submodule "pack/mypackage/start/vim-airline-themes"]
 	path = pack/mypackage/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "pack/mypackage/start/previm"]
+	path = pack/mypackage/start/previm
+	url = https://github.com/previm/previm.git
+[submodule "pack/mypackage/start/vaffle.vim"]
+	path = pack/mypackage/start/vaffle.vim
+	url = https://github.com/cocopon/vaffle.vim.git

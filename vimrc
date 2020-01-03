@@ -354,3 +354,8 @@ let g:fzf_colors =
 " previous-history instead of down and up. If you don't like the change,
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+" setting previm
+let g:vim_markdown_folding_disabled = 1
+let g:previm_enable_realtime = 1
+nnoremap <silent> <C-p> :PrevimOpen<CR>
