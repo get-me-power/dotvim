@@ -8,10 +8,9 @@
 
 ## setting this dotfiles
 
-1. 
-    ```
-    $ git clone --recursive https://github.com/kazukazuinaina/dotvim.git ~/.vim
-    ```
+```
+$ git clone --recursive https://github.com/kazukazuinaina/dotvim.git ~/.vim
+```
 
 ## add plugin
 
