@@ -79,3 +79,6 @@
 [submodule "pack/mypackage/start/vim-fugitive"]
 	path = pack/mypackage/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule "pack/mypackage/start/vim-matchup"]
+	path = pack/mypackage/start/vim-matchup
+	url = https://github.com/andymass/vim-matchup.git
