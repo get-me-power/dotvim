@@ -2,9 +2,11 @@
 
 ## Requirement
 
-[gopls](https://github.com/golang/go/wiki/gopls)
+- Vim8 (Use packadd)
 
-[pyls](https://github.com/palantir/python-language-server)
+- [gopls](https://github.com/golang/go/wiki/gopls)
+
+- [pyls](https://github.com/palantir/python-language-server)
 
 ## setting this dotfiles
 
