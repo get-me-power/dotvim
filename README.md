@@ -1,4 +1,4 @@
-# This repository is vim config file
+# This repository is vim config file [![Build Status](https://travis-ci.org/kazukazuinaina/dotvim.svg?branch=master)](https://travis-ci.org/kazukazuinaina/dotvim)
 
 ## Requirement
 
