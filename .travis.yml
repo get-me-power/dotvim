@@ -7,3 +7,4 @@ install:
 
 script:
   - vint vimrc
+  - vint vimplug_rc.vim
