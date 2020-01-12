@@ -82,3 +82,6 @@
 [submodule "pack/mypackage/start/vim-matchup"]
 	path = pack/mypackage/start/vim-matchup
 	url = https://github.com/andymass/vim-matchup.git
+[submodule "pack/mypackage/start/vimproc.vim"]
+	path = pack/mypackage/start/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git

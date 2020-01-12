@@ -44,6 +44,7 @@ Plug 'thinca/vim-quickrun'
 Plug 'tpope/vim-surround'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'mattn/webapi-vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 call plug#end()
 
 syntax enable
