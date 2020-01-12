@@ -167,7 +167,16 @@ let g:airline_right_alt_sep = '⮃'
 "--------setting vim-quickrun------------
 
 if !exists("g:quickrun_config")
-  let g:quickrun_config = {}
+  let g:quickrun_config = {
+        \    "_" : {
+        \       "runner" : "vimproc",
+        \       "runner/vimproc/updatetime" : 60
+        \   },
+        \    'tex': {
+        \    'command': 'platex',
+        \    'exec': ['%c -output-directory %s:h %s', 'dvipdfmx -o %s:r.pdf %s:r.dvi', 'open %s:r.pdf']
+        \   },
+        \}
 endif
 
 "helpを日本語化"
