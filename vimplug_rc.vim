@@ -19,15 +19,17 @@ set runtimepath+=~/myplugin/vim
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
-Plug 'dense-analysis/ale'
 Plug 'lambdalisue/gina.vim'
 Plug 'vim-jp/vital.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete-necovim.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'mattn/vim-lsp-settings'
 Plug 'vim-jp/autofmt'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+if !executable('fzf')
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+endif
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'Shougo/neco-vim'
@@ -252,13 +254,15 @@ augroup MyFileTypeEvent
   autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd FileType vim packadd ale
   autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufReadPre *.org packadd vim-orgmode
 augroup END
 
 " --------setting autofmt----------
 set formatexpr=autofmt#japanese#formatexpr()
+
+" --------settihg vim-lsp----------
+let g:lsp_diagnostics_echo_cursor = 1
 
 " javaのsyntaxの設定
 let g:java_highlight_all=1
@@ -280,57 +284,6 @@ command -nargs=0 OnTermdebug call OnTermdebug()
 if executable('ctags')
   set tags=./tags;
 endif
-
-" ---setting vim-lsp---------
-
-if executable('pyls')
-  " pip install python-language-server
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-
-if executable('solargraph')
-  " gem install solargraph
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'solargraph',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-        \ 'initialization_options': {"diagnostics": "true"},
-        \ 'whitelist': ['ruby'],})
-endif
-
-if executable('gopls')
-  augroup LspGo
-    au!
-    autocmd User lsp_setup call lsp#register_server({
-          \ 'name': 'go-lang',
-          \ 'cmd': {server_info->['gopls']},
-          \ 'whitelist': ['go'],
-          \ })
-    autocmd FileType go setlocal omnifunc=lsp#complete
-    autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
-    autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
-    autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
-  augroup END
-endif
-
-if executable('clangd')
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'clangd',
-        \ 'cmd': {server_info->['clangd', '-background-index']},
-        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-        \ })
-endif
-
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necovim#get_source_options({
-      \ 'name': 'necovim',
-      \ 'whitelist': ['vim'],
-      \ 'completor': function('asyncomplete#sources#necovim#completor'),
-      \ }))
-let g:lsp_diagnostics_echo_cursor = 1
-setlocal omnifunc=lsp#complete
 
 " -------setting vim-devicons------------
 
