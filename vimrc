@@ -239,7 +239,6 @@ augroup MyFileTypeEvent
   autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd FileType vim packadd ale
   autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd BufReadPre *.org packadd vim-orgmode
 augroup END
@@ -267,57 +266,6 @@ command -nargs=0 OnTermdebug call OnTermdebug()
 if executable('ctags')
   set tags=./tags;
 endif
-
-" ---setting vim-lsp---------
-
-if executable('pyls')
-  " pip install python-language-server
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-
-if executable('solargraph')
-  " gem install solargraph
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'solargraph',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-        \ 'initialization_options': {"diagnostics": "true"},
-        \ 'whitelist': ['ruby'],})
-endif
-
-if executable('gopls')
-  augroup LspGo
-    au!
-    autocmd User lsp_setup call lsp#register_server({
-          \ 'name': 'go-lang',
-          \ 'cmd': {server_info->['gopls']},
-          \ 'whitelist': ['go'],
-          \ })
-    autocmd FileType go setlocal omnifunc=lsp#complete
-    autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
-    autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
-    autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
-  augroup END
-endif
-
-if executable('clangd')
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'clangd',
-        \ 'cmd': {server_info->['clangd', '-background-index']},
-        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-        \ })
-endif
-
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necovim#get_source_options({
-      \ 'name': 'necovim',
-      \ 'whitelist': ['vim'],
-      \ 'completor': function('asyncomplete#sources#necovim#completor'),
-      \ }))
-let g:lsp_diagnostics_echo_cursor = 1
-setlocal omnifunc=lsp#complete
 
 " -------setting vim-devicons------------
 

@@ -46,15 +46,6 @@
 [submodule "pack/mypackage/start/asyncomplete.vim"]
 	path = pack/mypackage/start/asyncomplete.vim
 	url = https://github.com/prabirshrestha/asyncomplete.vim
-[submodule "pack/mypackage/start/neco-vim"]
-	path = pack/mypackage/start/neco-vim
-	url = https://github.com/Shougo/neco-vim
-[submodule "pack/mypackage/start/asyncomplete-necovim.vim"]
-	path = pack/mypackage/start/asyncomplete-necovim.vim
-	url = https://github.com/prabirshrestha/asyncomplete-necovim.vim
-[submodule "pack/mypackage/opt/ale"]
-	path = pack/mypackage/opt/ale
-	url = https://github.com/dense-analysis/ale.git
 [submodule "pack/mypackage/opt/gina.vim"]
 	path = pack/mypackage/opt/gina.vim
 	url = https://github.com/lambdalisue/gina.vim.git
@@ -85,3 +76,6 @@
 [submodule "pack/mypackage/start/vimproc.vim"]
 	path = pack/mypackage/start/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "pack/mypackage/start/vim-lsp-settings"]
+	path = pack/mypackage/start/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings.git
