@@ -246,6 +246,11 @@ augroup END
 " --------setting autofmt----------
 set formatexpr=autofmt#japanese#formatexpr()
 
+" --------settihg vim-lsp----------
+let g:lsp_diagnostics_echo_cursor = 1
+
+" gopls is not run if you don't work .git repo or not exist go.mod file dir...
+
 " javaのsyntaxの設定
 let g:java_highlight_all=1
 let g:java_highlight_functions="style"
