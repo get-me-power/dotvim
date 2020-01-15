@@ -1,6 +1,13 @@
 set encoding=utf-8
 scriptencoding utf-8
 
+" Encoding. {{{
+if has('vim_starting')
+  " Changing encoding in Vim at runtime is undefined behavior.
+  set fileencodings=utf-8,sjis,cp932,euc-jp
+  set fileformats=unix,mac,dos
+endif
+
 " ---- setting custom plugins ------- "
 "set runtimepath+=~/Javasnippet.vim
 "set runtimepath+=~/InsertSemiColon.vim
