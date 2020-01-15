@@ -72,10 +72,6 @@ set background=dark
 "colorschemeをgruvboxに設定
 colorscheme gruvbox
 
-if has('termguicolors')
-  set termguicolors
-endif
-
 "行番号を表示"
 set number
 
