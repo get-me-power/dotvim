@@ -25,7 +25,7 @@ env:
 
 script:
   - vint vimrc
-  - vint vimplug_rc.vim
+  - vint rc/vimplug_rc.vim
   - sh bin/vimplug_installer.sh
   - vim --version
   - vim +":so test/test.vim"
