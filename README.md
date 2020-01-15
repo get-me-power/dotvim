@@ -4,17 +4,13 @@
 
 - Vim8 (Use packadd)
 
-- [gopls](https://github.com/golang/go/wiki/gopls)
-
-- [pyls](https://github.com/palantir/python-language-server)
-
-## setting this dotfiles
+## Setting this dotfiles
 
 ```
 $ git clone --recursive https://github.com/kazukazuinaina/dotvim.git ~/.vim
 ```
 
-## add plugin
+## Add plugin
 
 you must transfar plugin's directory and do command below
 
@@ -22,13 +18,13 @@ you must transfar plugin's directory and do command below
 $  git submodule add 'plugin name'
 ```
 
-## update repo
+## Update repo
+
 ```
-git pull
-git submodule update --init --recursive
+git pull && git submodule update --init --recursive
 ```
 
-## update plugin's command
+## Update plugin's command
 
 do this command
     ```
