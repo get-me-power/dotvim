@@ -79,3 +79,9 @@
 [submodule "pack/mypackage/start/vim-lsp-settings"]
 	path = pack/mypackage/start/vim-lsp-settings
 	url = https://github.com/mattn/vim-lsp-settings.git
+[submodule "pack/mypackage/start/iceberg.vim"]
+	path = pack/mypackage/start/iceberg.vim
+	url = https://github.com/cocopon/iceberg.vim.git
+[submodule "pack/mypackage/start/vim"]
+	path = pack/mypackage/start/vim
+	url = https://github.com/dracula/vim.git
