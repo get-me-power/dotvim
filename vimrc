@@ -1,6 +1,13 @@
 set encoding=utf-8
 scriptencoding utf-8
 
+" Encoding. {{{
+if has('vim_starting')
+    " Changing encoding in Vim at runtime is undefined behavior.
+    set fileencodings=utf-8,sjis,cp932,euc-jp
+    set fileformats=unix,mac,dos
+endif
+
 " ---- setting custom plugins ------- "
 "set runtimepath+=~/Javasnippet.vim
 "set runtimepath+=~/InsertSemiColon.vim
@@ -182,12 +189,12 @@ endif
 set helplang=ja,en
 
 " インデントコマンドを定義
-function Indent()
+function s:Indent()
   let save_cursor = getcurpos()
   execute "normal " . "gg=G"
   call setpos('.', save_cursor)
 endfunction
-command -nargs=0 Indent call Indent()
+command -nargs=0 Indent call s:Indent()
 
 " 補完コマンドの再設定
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : MyInsCompl()
@@ -225,14 +232,14 @@ endfunction
 
 "--------plugin update command---------
 
-function PluginUpdate() abort
+function s:PluginUpdate() abort
   if has('mac') || has('linux')
     !git -C ~/.vim submodule foreach git pull origin master
   endif
 endfunction
-command -nargs=0 PluginUpdate call PluginUpdate()
+command -nargs=0 PluginUpdate call s:PluginUpdate()
 
-augroup MyFileTypeEvent
+augroup MyFileTypeIndentOverRide
   autocmd!
   autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4
   autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -257,7 +264,7 @@ let g:java_allow_cpp_keywords=1
 
 " ----------setting termdebeg-------
 
-function! OnTermdebug() abort
+function! s:OnTermdebug() abort
   if executable('gdb')
     packadd termdebug
     :Termdebug
@@ -265,7 +272,7 @@ function! OnTermdebug() abort
     echo 'gdb is not found'
   endif
 endfunction
-command -nargs=0 OnTermdebug call OnTermdebug()
+command -nargs=0 OnTermdebug call s:OnTermdebug()
 
 if executable('ctags')
   set tags=./tags;
