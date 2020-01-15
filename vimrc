@@ -18,10 +18,13 @@ set runtimepath+=~/myplugin/vim
 " set runtimepath+=~/myplugin/PlayMusic.vim
 
 " setting fzf's runtime
-if has('mac')
-  set rtp+=/usr/local/opt/fzf
-elseif has('linux')
-  set rtp+=~/.fzf
+if executable('fzf')
+  if has('mac')
+    " homebrew install fzf
+    set rtp+=/usr/local/opt/fzf
+  elseif has('linux')
+    set rtp+=~/.fzf
+  endif
 endif
 
 syntax enable
