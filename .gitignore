@@ -15,3 +15,7 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+# vim-plug
+autoload/*
+plugged/*
