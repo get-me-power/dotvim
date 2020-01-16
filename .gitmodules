@@ -7,9 +7,6 @@
 [submodule "pack/mypackage/opt/vital.vim"]
 	path = pack/mypackage/opt/vital.vim
 	url = https://github.com/vim-jp/vital.vim.git
-[submodule "pack/mypackage/start/webapi-vim"]
-	path = pack/mypackage/start/webapi-vim
-	url = https://github.com/mattn/webapi-vim.git
 [submodule "pack/mypackage/start/vim-polyglot"]
 	path = pack/mypackage/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
