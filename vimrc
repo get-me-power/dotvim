@@ -254,6 +254,7 @@ set formatexpr=autofmt#japanese#formatexpr()
 
 " --------settihg vim-lsp----------
 let g:lsp_diagnostics_echo_cursor = 1
+nnoremap <expr> <silent> <C-]> execute(':LspDefinition') =~ "not supported" ? "\<C-]>" : ":echo<cr>"
 
 " gopls is not run if you don't work .git repo or not exist go.mod file dir...
 
