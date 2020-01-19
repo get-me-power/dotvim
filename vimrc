@@ -256,7 +256,13 @@ set formatexpr=autofmt#japanese#formatexpr()
 let g:lsp_diagnostics_echo_cursor = 1
 nnoremap <expr> <silent> <C-]> execute(':LspDefinition') =~ "not supported" ? "\<C-]>" : ":echo<cr>"
 
-" gopls is not run if you don't work .git repo or not exist go.mod file dir...
+" setting vim-anzu
+let g:airline#extensions#anzu#enabled = 0
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+
 
 " javaのsyntaxの設定
 let g:java_highlight_all=1
