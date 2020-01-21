@@ -39,6 +39,8 @@ filetype plugin indent on
 
 " テキストの折返しをするかどうか...
 " set nowrap
+
+" setting csv.vim
 let g:csv_delim=','
 
 set autoindent
