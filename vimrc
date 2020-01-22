@@ -248,7 +248,7 @@ augroup MyFileTypeIndentOverRide
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd BufReadPre *.org packadd vim-orgmode
+  autocmd BufNewFile,BufRead *.org packadd vim-orgmode
 augroup END
 
 " --------setting autofmt----------
