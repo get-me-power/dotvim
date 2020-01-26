@@ -190,13 +190,22 @@ endif
 "helpを日本語化"
 set helplang=ja,en
 
-" インデントコマンドを定義
+" define indent command
 function s:Indent()
   let save_cursor = getcurpos()
   execute "normal " . "gg=G"
   call setpos('.', save_cursor)
 endfunction
 command -nargs=0 Indent call s:Indent()
+
+function s:PluginList()
+  let files = split(globpath(&rtp, "pack/mypackage/*/*"), "\n")
+  call map(files, 'fnamemodify(v:val, ":t")')
+  for plug in files
+    echo plug
+  endfor
+endfunction
+command -nargs=0 PluginList call s:PluginList()
 
 " 補完コマンドの再設定
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : MyInsCompl()
