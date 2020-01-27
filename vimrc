@@ -52,32 +52,32 @@ set background=dark
 "colorschemeをgruvboxに設定
 colorscheme gruvbox
 
-"行番号を表示"
+"行番号を表示
 set number
 
-"バックアップファイルを作らない"
+"バックアップファイルを作らない
 set nobackup
 
-"バックスペースの問題を解消"
+"バックスペースの問題を解消
 " :h 'backspace'
 set backspace=indent,eol,start
 
-"行末の1文字先までカーソルを移動可能に"
+"行末の1文字先までカーソルを移動可能に
 set virtualedit=onemore
 
-"エンターキーで確定する前から，文字が入力されるたびに検索を行う"
+"エンターキーで確定する前から，文字が入力されるたびに検索を行う
 set incsearch
 
-"検索で大文字と小文字を区別しない"
+"検索で大文字と小文字を区別しない
 set ignorecase
 
-"スワップファイルを作らない"
+"スワップファイルを作らない
 set noswapfile
 
-"検索文字列をハイライト"
+"検索文字列をハイライト
 set hlsearch
 
-"TABキーを押した際にタブ文字の代わりにスペースを入れる,スペースのサイズは四文字"
+"TABキーを押した際にタブ文字の代わりにスペースを入れる,スペースのサイズは四文字
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -89,7 +89,7 @@ set wildmode=full
 " 履歴の記録を増やす
 set history=200
 
-"マウスを有効"
+"マウスを有効
 if has('mouse')
   set mouse=a
 endif
@@ -97,7 +97,7 @@ endif
 "modeを非表示にする
 set noshowmode
 
-"スペース + tでターミナル起動"
+"スペースをトリガーにする
 let mapleader = "\<Space>"
 
 noremap <Leader>t :terminal<CR>
@@ -105,14 +105,14 @@ nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>s :split<CR>
 nnoremap <Leader>f :FZF<CR>
 
-"ウインドウ移動ショートカットをswに当てる"
+"ウインドウ移動ショートカットをswに当てる
 nnoremap sw <C-w>w
 
 if has('terminal')
   tnoremap <silent><C-u> <C-\><C-N>
 endif
 
-"検索ハイライトの設定"
+"検索ハイライトの設定
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " ----setting gina.vim
@@ -187,9 +187,6 @@ if !exists("g:quickrun_config")
         \}
 endif
 
-"helpを日本語化"
-set helplang=ja,en
-
 " define indent command
 function s:Indent()
   let save_cursor = getcurpos()
@@ -257,7 +254,7 @@ augroup MyFileTypeIndentOverRide
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd BufNewFile,BufRead *.org packadd vim-orgmode
+  autocmd BufNewFile,BufReadPre *.org packadd! vim-orgmode
 augroup END
 
 " --------setting autofmt----------
