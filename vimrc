@@ -8,6 +8,10 @@ if has('vim_starting')
   set fileformats=unix,mac,dos
 endif
 
+if has('gui_running')
+  set guifont=Hack\ Nerd\ Font
+endif
+
 " ---- setting custom plugins ------- "
 "set runtimepath+=~/Javasnippet.vim
 "set runtimepath+=~/InsertSemiColon.vim
