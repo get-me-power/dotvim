@@ -82,9 +82,6 @@
 [submodule "pack/mypackage/start/vim-anzu"]
 	path = pack/mypackage/start/vim-anzu
 	url = https://github.com/osyo-manga/vim-anzu.git
-[submodule "pack/mypackage/start/dracula"]
-	path = pack/mypackage/start/dracula
-	url = https://github.com/dracula/vim.git
 [submodule "pack/mypackage/opt/dracula"]
 	path = pack/mypackage/opt/dracula
 	url = https://github.com/dracula/vim.git
