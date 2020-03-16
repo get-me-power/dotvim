@@ -107,7 +107,7 @@ let mapleader = "\<Space>"
 noremap <Leader>t :terminal<CR>
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>s :split<CR>
-nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
 
 "ウインドウ移動ショートカットをswに当てる
