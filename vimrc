@@ -126,7 +126,7 @@ if exists(':Gina')
   nnoremap <Up> :Gina status<CR>
   nnoremap <Down> :Gina commit<CR>
   nnoremap <Left> :Gina diff<CR>
-  nnoremap <Right> :QuickRun<CR>
+  nnoremap <Right> :Gina grep 
 endif
 noremap! <Up> <Nop>
 noremap! <Down> <Nop>
