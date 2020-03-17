@@ -12,22 +12,6 @@ if has('gui_running')
   set guifont=Hack\ Nerd\ Font
 endif
 
-" ---- setting custom plugins ------- "
-"set runtimepath+=~/Javasnippet.vim
-"set runtimepath+=~/InsertSemiColon.vim
-"set runtimepath+=~/vim-zenspace
-"set runtimepath+=~/sweep_trail.vim
-"set runtimepath+=~/Timer.vim
-set runtimepath+=~/myplugin/Weather.vim
-"set runtimepath+=~/vim-amake
-set runtimepath+=~/myplugin/Tweet.vim
-" set runtimepath+=~/myplugin/commentout.vim
-" set runtimepath+=~/myplugin/vimgon-quest-menu
-set runtimepath+=~/myplugin/vim-starwars
-set runtimepath+=~/myplugin/vim-sl
-set runtimepath+=~/myplugin/vim
-" set runtimepath+=~/myplugin/PlayMusic.vim
-
 " setting fzf's runtime
 if executable('fzf')
   if has('mac')
@@ -145,6 +129,7 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline#extensions#term#enabled = 0
 let g:airline#extensions#nerdtree_statusline = 0
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#show_tab_conut = 2
 let g:airline_theme = 'base16_gruvbox_dark_hard'
 
 if !exists('g:airline_symbols')
