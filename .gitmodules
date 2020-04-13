@@ -85,3 +85,6 @@
 [submodule "pack/mypackage/opt/dracula"]
 	path = pack/mypackage/opt/dracula
 	url = https://github.com/dracula/vim.git
+[submodule "pack/mypackage/start/suda.vim"]
+	path = pack/mypackage/start/suda.vim
+	url = https://github.com/lambdalisue/suda.vim.git
