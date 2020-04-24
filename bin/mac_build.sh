@@ -41,6 +41,7 @@ else
                 --enable-pythoninterp \
                 --enable-python3interp \
                 --enable-rubyinterp=yes \
+                --enable-luainterp \
                 --enable-fail-if-missing
                 sudo make
                 sudo make install
