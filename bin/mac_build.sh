@@ -41,7 +41,7 @@ else
                 --enable-pythoninterp \
                 --enable-python3interp \
                 --enable-rubyinterp=yes \
-                --enable-luainterp \
+                --enable-luainterp=yes --with-lua-prefix=/usr/local \
                 --enable-fail-if-missing
                 sudo make
                 sudo make install
