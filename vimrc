@@ -351,8 +351,10 @@ let g:vim_markdown_folding_disabled = 1
 let g:previm_enable_realtime = 1
 nnoremap <silent> <C-p> :PrevimOpen<CR>
 
+" ----------setting vim-lsp----------
+
 if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar'))
-    au User lsp_setup call lsp#register_server({
+  au User lsp_setup call lsp#register_server({
         \ 'name': 'eclipse.jdt.ls',
         \ 'cmd': {server_info->[
         \     'java',
@@ -373,3 +375,10 @@ if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.e
         \ 'whitelist': ['java'],
         \ })
 endif
+
+" ----------setting vaffle-----------
+
+function! RenderMyFavoriteIcon(item) abort
+  return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)
+endfunction
+let g:vaffle_render_custom_icon = 'RenderMyFavoriteIcon'
