@@ -24,7 +24,6 @@ else
     if [ "`echo $result | grep 'Already'`" ]; then
         echo 'Already up to date'
         echo 'finish'
-    else
         echo 'git pull is success!'
         # build
         cd ~/vim/src
@@ -33,8 +32,9 @@ else
         if [ "$answer" == "yes" ]; then
             pyenv local --unset
             pyenv shell --unset
-            pyenv global 2.7.6 3.7.0
+            pyenv global 3.7.0 2.7.17
             sudo make distclean
+            LDFLAGS="-Wl,-rpath=${HOME}/.pyenv/versions/2.7.17/lib:${HOME}/.pyenv/versions/3.7.0/lib"
             ./configure \
                 --with-features=huge \
                 --enable-perlinterp \
