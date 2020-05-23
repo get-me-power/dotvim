@@ -38,9 +38,14 @@ else
             LDFLAGS="-Wl,-rpath=${HOME}/.pyenv/versions/2.7.17/lib:${HOME}/.pyenv/versions/3.7.0/lib"
             ./configure \
                 --with-features=huge \
+                --enable-gpm \
+                --enable-cscope \
+                --enable-multibyte \
+                --enable-fontset \
                 --enable-perlinterp \
                 --enable-pythoninterp \
                 --enable-python3interp \
+                --enable-gui=auto \
                 --enable-rubyinterp=yes \
                 --enable-luainterp=yes --with-lua-prefix=/usr/local \
                 --enable-fail-if-missing
