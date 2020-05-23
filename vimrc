@@ -30,6 +30,7 @@ endif
 
 if has('gui_running')
   set guifont=Hack\ Nerd\ Font
+  set imdisable
 endif
 
 " setting fzf's runtime
