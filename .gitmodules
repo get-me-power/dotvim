@@ -88,3 +88,6 @@
 [submodule "pack/mypackage/start/suda.vim"]
 	path = pack/mypackage/start/suda.vim
 	url = https://github.com/lambdalisue/suda.vim.git
+[submodule "pack/mypackage/start/vim-endwise"]
+	path = pack/mypackage/start/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
