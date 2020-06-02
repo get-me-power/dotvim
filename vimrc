@@ -1,6 +1,12 @@
 set encoding=utf-8
 scriptencoding utf-8
 
+" Encoding. {{{
+if has('vim_starting') " Changing encoding in Vim at runtime is undefined behavior.
+  set fileencodings=utf-8,sjis,cp932,euc-jp
+  set fileformats=unix,mac,dos
+endif
+
 " setting global variable
 let g:tex_flavor = "latex"
 " default plugin setting
@@ -21,12 +27,6 @@ let g:loaded_netrwSettings     = 1
 let g:loaded_netrwFileHandlers = 1
 let g:netrw_nogx = 1
 
-" Encoding. {{{
-if has('vim_starting')
-  " Changing encoding in Vim at runtime is undefined behavior.
-  set fileencodings=utf-8,sjis,cp932,euc-jp
-  set fileformats=unix,mac,dos
-endif
 
 if has('gui_running')
   set guifont=Hack\ Nerd\ Font
