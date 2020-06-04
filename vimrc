@@ -151,6 +151,7 @@ let g:airline#extensions#term#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#lsp#enabled = 0
 let g:airline#extensions#vimtex#enabled = 0
+let g:airline#extensions#fugitiveline#enabled = 0
 let g:airline_theme = 'base16_gruvbox_dark_hard'
 
 if !exists('g:airline_symbols')
