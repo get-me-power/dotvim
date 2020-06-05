@@ -59,7 +59,8 @@ set smartindent
 set background=dark
 
 "colorschemeをgruvboxに設定
-colorscheme gruvbox
+set termguicolors
+colorscheme iceberg
 
 "行番号を表示
 set number
@@ -152,7 +153,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#lsp#enabled = 0
 let g:airline#extensions#vimtex#enabled = 0
 let g:airline#extensions#fugitiveline#enabled = 0
-let g:airline_theme = 'base16_gruvbox_dark_hard'
+let g:airline_theme = 'iceberg'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
