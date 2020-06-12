@@ -91,3 +91,6 @@
 [submodule "pack/mypackage/start/vim-endwise"]
 	path = pack/mypackage/start/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
+[submodule "pack/mypackage/start/vim-cursorword"]
+	path = pack/mypackage/start/vim-cursorword
+	url = https://github.com/itchyny/vim-cursorword.git
