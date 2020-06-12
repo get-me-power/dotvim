@@ -94,3 +94,6 @@
 [submodule "pack/mypackage/start/vim-cursorword"]
 	path = pack/mypackage/start/vim-cursorword
 	url = https://github.com/itchyny/vim-cursorword.git
+[submodule "pack/mypackage/start/vim-easymotion"]
+	path = pack/mypackage/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
