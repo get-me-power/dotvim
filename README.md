@@ -1,4 +1,4 @@
-# This repository is vim config file ![reviewdog](https://github.com/kazukazuinaina/dotvim/workflows/reviewdog/badge.svg?branch=master)
+# This repository is vim config file ![reviewdog](https://github.com/kazukazuinaina/dotvim/workflows/vint/badge.svg?branch=master)
 
 ## Requirement
 
