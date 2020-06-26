@@ -26,14 +26,15 @@ fi
 # build
 cd ~/vim/src
 echo 'start build vim'
+sudo make distclean
 ./configure \
     --with-features=huge \
     --enable-gui=gtk2 \
-    --enable-perlinterp \
-    --enable-pythoninterp \
-    --enable-python3interp \
-    --enable-rubyinterp \
-    --enable-luainterp \
+    --enable-perlinterp=yes \
+    --enable-pythoninterp=yes \
+    --enable-python3interp=yes \
+    --enable-rubyinterp=yes \
+    --enable-luainterp=yes \
     --enable-fail-if-missing
 
 sudo make
