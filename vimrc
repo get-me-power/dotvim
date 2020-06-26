@@ -30,7 +30,6 @@ let g:netrw_nogx = 1
 
 if has('gui_running')
   set guifont=Hack\ Nerd\ Font
-  set imdisable
 endif
 
 " setting fzf's runtime
@@ -134,10 +133,12 @@ if exists(':Gina')
   nnoremap <Left> :Gina diff<CR>
   nnoremap <Right> :Gina grep 
 endif
-noremap! <Up> <Nop>
-noremap! <Down> <Nop>
-noremap! <Left> <Nop>
-noremap! <Right> <Nop>
+if !has('gui_running')
+  noremap! <Up> <Nop>
+  noremap! <Down> <Nop>
+  noremap! <Left> <Nop>
+  noremap! <Right> <Nop>
+endif
 
 "---------setting vim-airline-----------
 
