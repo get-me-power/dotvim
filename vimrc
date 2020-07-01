@@ -154,6 +154,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#lsp#enabled = 0
 let g:airline#extensions#vimtex#enabled = 0
 let g:airline#extensions#fugitiveline#enabled = 0
+let g:airline#extensions#wordcount#enabled = 0
 let g:airline_theme = 'iceberg'
 
 if !exists('g:airline_symbols')
