@@ -382,3 +382,6 @@ let g:vaffle_render_custom_icon = 'RenderMyFavoriteIcon'
 
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+" setting cica
+"let g:airline_right_sep = ' '
+"let g:airline_right_alt_sep = ' '
