@@ -114,6 +114,9 @@ nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>s :split<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles<CR>
+if executable('rg')
+  nnoremap <Leader>r :Rg<CR>
+endif
 
 "ウインドウ移動ショートカットをswに当てる
 nnoremap sw <C-w>w
@@ -382,6 +385,7 @@ let g:vaffle_render_custom_icon = 'RenderMyFavoriteIcon'
 
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
 " setting cica
-"let g:airline_right_sep = ' '
-"let g:airline_right_alt_sep = ' '
+" let g:airline_right_sep = ' '
+" let g:airline_right_alt_sep = ' '
