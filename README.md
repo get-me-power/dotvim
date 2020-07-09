@@ -35,6 +35,11 @@ or
     $ git submodule foreach git pull origin master
     ```
 
+## dependence
+
+- [fzf](https://github.com/junegunn/fzf)
+- [rg](https://github.com/BurntSushi/ripgrep)
+
 ## References
 
 > http://tyru.hatenablog.com/entry/2017/12/20/035142
