@@ -134,7 +134,7 @@ if exists(':Gina')
   nnoremap <Up> :Gina status<CR>
   nnoremap <Down> :Gina commit<CR>
   nnoremap <Left> :Gina diff<CR>
-  nnoremap <Right> :Gina grep 
+  nnoremap <Right> :Gina grep<CR>
 endif
 if !has('gui_running')
   noremap! <Up> <Nop>
