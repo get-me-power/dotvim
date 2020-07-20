@@ -150,16 +150,8 @@ endif
 "シーケンスの遅延を解消
 set ttimeoutlen=10
 
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#whitespace#mixed_indent_algo = 1
-let g:airline#extensions#term#enabled = 0
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#lsp#enabled = 0
-let g:airline#extensions#vimtex#enabled = 0
-let g:airline#extensions#fugitiveline#enabled = 0
-let g:airline#extensions#wordcount#enabled = 0
+let g:airline_extensions = ['tabline', 'gina', 'fzf', 'branch', 'searchcount']
 let g:airline_theme = 'iceberg'
 
 if !exists('g:airline_symbols')
