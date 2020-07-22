@@ -306,7 +306,7 @@ let g:fzf_action = {
       \ 'ctrl-x': 'split',
       \ 'ctrl-v': 'vsplit' }
 
-let g:fzf_layout = { 'window': '40' }
+let g:fzf_layout = { 'window': '10new' }
 
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
