@@ -19,3 +19,6 @@ tags
 # vim-plug
 autoload/*
 plugged/*
+
+# minpac
+pack/*

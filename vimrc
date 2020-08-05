@@ -42,6 +42,47 @@ if executable('fzf')
   endif
 endif
 
+"packadd minpac
+if exists('*minpac#init')
+  call minpac#init()
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+  call minpac#add('vim-airline/vim-airline')
+  call minpac#add('vim-airline/vim-airline-themes')
+  call minpac#add('andymass/vim-matchup')
+  call minpac#add('cocopon/iceberg.vim')
+  call minpac#add('cocopon/vaffle.vim')
+  call minpac#add('junegunn/fzf.vim')
+  call minpac#add('itchyny/vim-cursorword')
+  call minpac#add('itchyny/calendar.vim')
+  call minpac#add('lambdalisue/gina.vim')
+  call minpac#add('lambdalisue/suda.vim')
+  call minpac#add('thinca/vim-quickrun')
+  call minpac#add('tpope/vim-endwise')
+  call minpac#add('tpope/vim-fugitive')
+  call minpac#add('prabirshrestha/vim-lsp')
+  call minpac#add('prabirshrestha/asyncomplete.vim')
+  call minpac#add('prabirshrestha/asyncomplete-lsp.vim')
+  call minpac#add('previm/previm')
+  call minpac#add('mattn/vim-lsp-settings')
+  call minpac#add('sheerun/vim-polyglot')
+  call minpac#add('Shougo/vimproc.vim', {'do': {-> system('make')}})
+  call minpac#add('vim-jp/autofmt')
+  call minpac#add('vim-jp/vimdoc-ja')
+  call minpac#add('vim-jp/syntax-vim-ex')
+  call minpac#add('vim-jp/vital.vim', {'type': 'opt'})
+  call minpac#add('easymotion/vim-easymotion')
+  call minpac#add('ryanoasis/vim-devicons')
+  " call minpac#add('osyo-manga/vim-anzu')
+
+endif
+
+
+" プラグインを更新/削除するためのユーザーコマンドの定義
+" いずれも、minpac をロードし、.vimrc を再読込してプラグインの情報を
+" 登録してから、作業を実行する。
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+
 syntax enable
 filetype plugin indent on
 
@@ -194,7 +235,7 @@ endfunction
 command -nargs=0 Indent call s:Indent()
 
 function s:PluginList()
-  let files = split(globpath(&rtp, "pack/mypackage/*/*"), "\n")
+  let files = split(globpath(&rtp, "pack/minpac/*/*"), "\n")
   call map(files, 'fnamemodify(v:val, ":t")')
   for plug in files
     echo plug
@@ -252,7 +293,6 @@ augroup MyFileTypeIndentOverRide
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd BufNewFile,BufReadPre *.org packadd! vim-orgmode
 augroup END
 
 " --------setting autofmt----------
@@ -261,13 +301,6 @@ set formatexpr=autofmt#japanese#formatexpr()
 " --------settihg vim-lsp----------
 let g:lsp_diagnostics_echo_cursor = 1
 nnoremap <expr> <silent> <C-]> execute(':LspDefinition') =~ "not supported" ? "\<C-]>" : ":echo<cr>"
-
-" setting vim-anzu
-let g:airline#extensions#anzu#enabled = 0
-nmap n <Plug>(anzu-n-with-echo)
-nmap N <Plug>(anzu-N-with-echo)
-nmap * <Plug>(anzu-star-with-echo)
-nmap # <Plug>(anzu-sharp-with-echo)
 
 
 " javaのsyntaxの設定
@@ -307,7 +340,6 @@ let g:fzf_action = {
       \ 'ctrl-v': 'vsplit' }
 
 let g:fzf_layout = { 'window': '10new' }
-
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " ----------setting previm-----------
@@ -315,31 +347,6 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:vim_markdown_folding_disabled = 1
 let g:previm_enable_realtime = 1
 nnoremap <silent> <C-p> :PrevimOpen<CR>
-
-" ----------setting vim-lsp----------
-
-if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar'))
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'eclipse.jdt.ls',
-        \ 'cmd': {server_info->[
-        \     'java',
-        \     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-        \     '-Dosgi.bundles.defaultStartLevel=4',
-        \     '-Declipse.product=org.eclipse.jdt.ls.core.product',
-        \     '-Dlog.level=ALL',
-        \     '-noverify',
-        \     '-Dfile.encoding=UTF-8',
-        \     '-Xmx1G',
-        \     '-jar',
-        \     expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar'),
-        \     '-configuration',
-        \     expand('~/lsp/eclipse.jdt.ls/config_mac'),
-        \     '-data',
-        \     getcwd()
-        \ ]},
-        \ 'whitelist': ['java'],
-        \ })
-endif
 
 " ----------setting vaffle-----------
 
