@@ -51,6 +51,7 @@ if exists('*minpac#init')
   call minpac#add('andymass/vim-matchup')
   call minpac#add('cocopon/iceberg.vim')
   call minpac#add('cocopon/vaffle.vim')
+  call minpac#add('cohama/lexima.vim')
   call minpac#add('junegunn/fzf.vim')
   call minpac#add('itchyny/vim-cursorword')
   call minpac#add('itchyny/calendar.vim')
@@ -74,13 +75,8 @@ if exists('*minpac#init')
   call minpac#add('easymotion/vim-easymotion')
   call minpac#add('ryanoasis/vim-devicons')
   " call minpac#add('osyo-manga/vim-anzu')
-
 endif
 
-
-" プラグインを更新/削除するためのユーザーコマンドの定義
-" いずれも、minpac をロードし、.vimrc を再読込してプラグインの情報を
-" 登録してから、作業を実行する。
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 
