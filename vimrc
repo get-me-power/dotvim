@@ -152,10 +152,9 @@ let mapleader = "\<Space>"
 noremap <Leader>t :terminal<CR>
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>s :split<CR>
-nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>g :GFiles<CR>
+nnoremap <Leader>f :GFiles<CR>
 if executable('rg')
-  nnoremap <Leader>r :Rg<CR>
+  nnoremap <Leader>g :Rg<CR>
 endif
 
 "ウインドウ移動ショートカットをswに当てる
