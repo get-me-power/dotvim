@@ -168,13 +168,10 @@ endif
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " ----setting gina.vim
-packadd gina.vim
-if exists(':Gina')
-  nnoremap <Up> :Gina status<CR>
-  nnoremap <Down> :Gina commit<CR>
-  nnoremap <Left> :Gina diff<CR>
-  nnoremap <Right> :Gina grep<CR>
-endif
+nnoremap <Up> :Gina status<CR>
+nnoremap <Down> :Gina commit<CR>
+nnoremap <Left> :Gina diff<CR>
+nnoremap <Right> :Gina grep<CR>
 if !has('gui_running')
   noremap! <Up> <Nop>
   noremap! <Down> <Nop>
