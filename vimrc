@@ -74,6 +74,7 @@ if exists('*minpac#init')
   call minpac#add('vim-jp/vital.vim', {'type': 'opt'})
   call minpac#add('easymotion/vim-easymotion')
   call minpac#add('ryanoasis/vim-devicons')
+  call minpac#add('lambdalisue/glyph-palette.vim')
   " call minpac#add('osyo-manga/vim-anzu')
 endif
 
@@ -348,6 +349,10 @@ function! RenderMyFavoriteIcon(item) abort
 endfunction
 let g:vaffle_render_custom_icon = 'RenderMyFavoriteIcon'
 
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType vaffle call glyph_palette#apply()
+augroup END
 " ---------setting open-blowser.vim
 
 nmap gx <Plug>(openbrowser-smart-search)
