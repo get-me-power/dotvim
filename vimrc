@@ -271,15 +271,6 @@ function! MyInsCompl()
   return "\<Tab>"
 endfunction
 
-"--------plugin update command---------
-
-function s:PluginUpdate() abort
-  if has('mac') || has('linux')
-    !git -C ~/.vim submodule foreach git pull origin master
-  endif
-endfunction
-command -nargs=0 PluginUpdate call s:PluginUpdate()
-
 augroup MyFileTypeIndentOverRide
   autocmd!
   autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4
