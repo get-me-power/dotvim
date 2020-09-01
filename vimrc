@@ -88,7 +88,7 @@ filetype plugin indent on
 " set nowrap
 
 " setting csv.vim
-let g:csv_delim=','
+let g:csv_delim = ','
 
 set autoindent
 set smartindent
@@ -357,7 +357,3 @@ augroup END
 
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
-
-" setting cica
-" let g:airline_right_sep = ' '
-" let g:airline_right_alt_sep = ' '
