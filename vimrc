@@ -75,6 +75,7 @@ if exists('*minpac#init')
   call minpac#add('easymotion/vim-easymotion')
   call minpac#add('ryanoasis/vim-devicons')
   call minpac#add('lambdalisue/glyph-palette.vim')
+  call minpac#add('morhetz/gruvbox')
   " call minpac#add('osyo-manga/vim-anzu')
 endif
 
@@ -187,7 +188,9 @@ set ttimeoutlen=10
 
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'gina', 'fzf', 'branch', 'searchcount', 'quickfix']
-let g:airline_theme = 'iceberg'
+if g:colors_name ==# 'gruvbox'
+  let g:airline_theme = 'base16_gruvbox_dark_hard'
+endif
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
