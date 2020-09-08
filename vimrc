@@ -58,7 +58,6 @@ if exists('*minpac#init')
   call minpac#add('lambdalisue/gina.vim')
   call minpac#add('lambdalisue/suda.vim')
   call minpac#add('thinca/vim-quickrun')
-  call minpac#add('tpope/vim-endwise')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('prabirshrestha/vim-lsp')
   call minpac#add('prabirshrestha/asyncomplete.vim')
@@ -315,8 +314,6 @@ endif
 " -------setting vim-devicons------------
 
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-let g:DevIconsDefaultFolderOpenSymbol = '' " symbol for open folder (f07c)
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = '' " symbol for closed folder (f07b)
 
 " --------setting fzf.vim----------
