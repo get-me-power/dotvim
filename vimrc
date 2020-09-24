@@ -212,8 +212,8 @@ nmap <leader>+ <Plug>AirlineSelectNextTab
 if !exists("g:quickrun_config")
   let g:quickrun_config = {
         \    "_" : {
-        \       "runner" : "vimproc",
-        \       "runner/vimproc/updatetime" : 60
+        \       "runner" : "job",
+        \       "outputter" : "buffer",
         \   },
         \    'tex': {
         \    'command': 'platex',
