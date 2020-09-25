@@ -43,7 +43,7 @@ if executable('fzf')
 endif
 
 "packadd minpac
-if exists('*minpac#init')
+if exists('g:loaded_minpac')
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
   call minpac#add('vim-airline/vim-airline')
