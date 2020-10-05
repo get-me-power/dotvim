@@ -79,6 +79,7 @@ endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PackStatus packadd minpac | call minpac#status()
 
 syntax enable
 filetype plugin indent on
