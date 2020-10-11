@@ -74,7 +74,7 @@ if exists('g:loaded_minpac')
   call minpac#add('ryanoasis/vim-devicons')
   call minpac#add('lambdalisue/glyph-palette.vim')
   call minpac#add('morhetz/gruvbox')
-  " call minpac#add('osyo-manga/vim-anzu')
+  call minpac#add('glidenote/memolist.vim')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
