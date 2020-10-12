@@ -52,7 +52,7 @@ else
                 sudo make
                 sudo make install
                 echo 'build done!'
-                pyenv global anaconda3-5.3.1
+                pyenv global 3.8.2
             else
             	echo 'finish'
             fi

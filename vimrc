@@ -75,6 +75,7 @@ if exists('g:loaded_minpac')
   call minpac#add('lambdalisue/glyph-palette.vim')
   call minpac#add('morhetz/gruvbox')
   call minpac#add('glidenote/memolist.vim')
+  call minpac#add('mhinz/vim-sayonara')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
@@ -238,15 +239,6 @@ function s:PluginList()
   endfor
 endfunction
 command -nargs=0 PluginList call s:PluginList()
-
-function s:DeleteHiddenBuffers()
-    let tpbl=[]
-    call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
-    for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
-        silent execute 'bwipeout' buf
-    endfor
-endfunction
-command -nargs=0 DeleteHiddenBuffers call s:DeleteHiddenBuffers()
 
 " 補完コマンドの再設定
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : MyInsCompl()
