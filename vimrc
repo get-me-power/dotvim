@@ -307,13 +307,6 @@ augroup lsp_install
   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
-"nnoremap <expr> <silent> <C-]> execute(':LspDefinition') =~ "not supported" ? "\<C-]>" : ":echo<cr>"
-
-
-" javaのsyntaxの設定
-let g:java_highlight_all=1
-let g:java_highlight_functions="style"
-let g:java_allow_cpp_keywords=1
 
 " ----------setting termdebeg-------
 
