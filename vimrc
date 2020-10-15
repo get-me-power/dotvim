@@ -76,6 +76,7 @@ if exists('g:loaded_minpac')
   call minpac#add('morhetz/gruvbox')
   call minpac#add('glidenote/memolist.vim')
   call minpac#add('mhinz/vim-sayonara')
+  call minpac#add('tyru/caw.vim')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
@@ -365,10 +366,16 @@ vmap gx <Plug>(openbrowser-smart-search)
 " delete hidden buffer
 
 function s:DeleteHiddenBuffers()
-    let tpbl=[]
-    call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
-    for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
-        silent execute 'bwipeout' buf
-    endfor
+  let tpbl=[]
+  call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
+  for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
+    silent execute 'bwipeout' buf
+  endfor
 endfunction
 command -nargs=0 DeleteHiddenBuffers call s:DeleteHiddenBuffers()
+
+let g:python_highlight_all = 1
+
+" setting caw.vim
+nmap <Leader>c <Plug>(caw:zeropos:toggle)
+vmap <Leader>c <Plug>(caw:zeropos:toggle)
