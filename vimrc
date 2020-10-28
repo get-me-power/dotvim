@@ -77,6 +77,7 @@ if exists('g:loaded_minpac')
   call minpac#add('glidenote/memolist.vim')
   call minpac#add('mhinz/vim-sayonara')
   call minpac#add('tyru/caw.vim')
+  call minpac#add('thinca/vim-ref')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
