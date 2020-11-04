@@ -380,3 +380,5 @@ let g:python_highlight_all = 1
 " setting caw.vim
 nmap <Leader>c <Plug>(caw:zeropos:toggle)
 vmap <Leader>c <Plug>(caw:zeropos:toggle)
+
+let g:ref_man_cmd = '/usr/bin/man'
