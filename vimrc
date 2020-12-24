@@ -382,3 +382,4 @@ nmap <Leader>c <Plug>(caw:zeropos:toggle)
 vmap <Leader>c <Plug>(caw:zeropos:toggle)
 
 let g:ref_man_cmd = '/usr/bin/man'
+let g:gina#command#blame#formatter#format = "%su%=by %au %ma%in"

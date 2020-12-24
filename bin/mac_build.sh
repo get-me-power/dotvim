@@ -24,18 +24,17 @@ else
     if [ "`echo $result | grep 'Already'`" ]; then
         echo 'Already up to date'
         echo 'finish'
-    else
         echo 'git pull is success!'
         # build
         cd ~/vim/src
         echo 'start build vim OK? [yes/no]'
         read answer
         if [ "$answer" == "yes" ]; then
+            sudo make distclean
             pyenv local --unset
             pyenv shell --unset
-            pyenv global 3.7.0 2.7.17
-            sudo make distclean
-            LDFLAGS="-Wl,-rpath=${HOME}/.pyenv/versions/2.7.17/lib:${HOME}/.pyenv/versions/3.7.0/lib"
+            pyenv global 3.7.0
+#             LDFLAGS="-Wl,-rpath=${HOME}/.pyenv/versions/3.6.3/lib"
             ./configure \
                 --with-features=huge \
                 --enable-gpm \
@@ -43,8 +42,8 @@ else
                 --enable-multibyte \
                 --enable-fontset \
                 --enable-perlinterp \
-                --enable-pythoninterp \
-                --enable-python3interp \
+                --enable-pythoninterp=no \
+                --enable-python3interp=yes \
                 --enable-gui=auto \
                 --enable-rubyinterp=yes \
                 --enable-luainterp=yes --with-lua-prefix=/usr/local \
