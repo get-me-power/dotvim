@@ -190,9 +190,6 @@ set ttimeoutlen=10
 
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'gina', 'fzf', 'branch', 'searchcount', 'quickfix']
-if g:colors_name ==# 'gruvbox'
-  let g:airline_theme = 'base16_gruvbox_dark_hard'
-endif
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
