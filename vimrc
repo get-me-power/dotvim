@@ -187,13 +187,10 @@ endif
 
 "シーケンスの遅延を解消
 set ttimeoutlen=10
-
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'gina', 'fzf', 'branch', 'searchcount', 'quickfix']
+let g:airline_section_c = '%t'
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
 
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
@@ -380,3 +377,4 @@ vmap <Leader>c <Plug>(caw:zeropos:toggle)
 
 let g:ref_man_cmd = '/usr/bin/man'
 let g:gina#command#blame#formatter#format = "%su%=by %au %ma%in"
+let g:airline_stl_only_filename = 1
