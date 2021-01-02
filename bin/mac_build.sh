@@ -24,6 +24,7 @@ else
     if [ "`echo $result | grep 'Already'`" ]; then
         echo 'Already up to date'
         echo 'finish'
+    else
         echo 'git pull is success!'
         # build
         cd ~/vim/src
