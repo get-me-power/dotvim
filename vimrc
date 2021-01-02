@@ -216,6 +216,10 @@ if !exists("g:quickrun_config")
         \    'command': 'platex',
         \    'exec': ['%c -output-directory %s:h %s', 'dvipdfmx -o %s:r.pdf %s:r.dvi', 'open %s:r.pdf']
         \   },
+        \    'plantuml': {
+        \    "command": "plantuml",
+        \    "exec": ["%c %s", "open %s:r.png"],
+        \}
         \}
 endif
 
@@ -377,4 +381,3 @@ vmap <Leader>c <Plug>(caw:zeropos:toggle)
 
 let g:ref_man_cmd = '/usr/bin/man'
 let g:gina#command#blame#formatter#format = "%su%=by %au %ma%in"
-let g:airline_stl_only_filename = 1
