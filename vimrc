@@ -277,6 +277,7 @@ endfunction
 augroup MyFileTypeIndentOverRide
   autocmd!
   autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4
   autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
