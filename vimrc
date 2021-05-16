@@ -157,6 +157,7 @@ noremap <Leader>t :terminal<CR>
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>s :split<CR>
 nnoremap <Leader>f :GFiles<CR>
+nnoremap <Leader>r :QuickRun<CR>
 if executable('rg')
   nnoremap <Leader>g :Rg<CR>
 endif
@@ -210,7 +211,6 @@ if !exists("g:quickrun_config")
   let g:quickrun_config = {
         \    "_" : {
         \       "runner" : "job",
-        \       "outputter" : "buffer",
         \   },
         \    'tex': {
         \    'command': 'platex',
