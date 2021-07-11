@@ -192,7 +192,8 @@ endif
 set ttimeoutlen=10
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'gina', 'fzf', 'branch', 'searchcount', 'quickfix']
-let g:airline_section_c = '%t%m'
+let airline_section_c_only_filename = 1
+let g:airline_experimental = 1
 
 
 nmap <leader>1 <Plug>AirlineSelectTab1
