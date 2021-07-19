@@ -80,6 +80,13 @@ nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>s :split<CR>
 nnoremap <silent><Leader>f :GFiles<CR>
 nnoremap <silent> <Leader>r :QuickRun<CR>
+nnoremap sw <C-w>w
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
+noremap! <Up> <Nop>
+noremap! <Down> <Nop>
+noremap! <Left> <Nop>
+noremap! <Right> <Nop>
 
 if has('terminal')
   nnoremap <Leader>t :terminal<CR>
@@ -90,18 +97,8 @@ if executable('rg')
   nnoremap <Leader>g :Rg<CR>
 endif
 
-nnoremap sw <C-w>w
-nnoremap <ESC><ESC> :nohlsearch<CR>
-
-if !has('gui_running')
-  noremap! <Up> <Nop>
-  noremap! <Down> <Nop>
-  noremap! <Left> <Nop>
-  noremap! <Right> <Nop>
-endif
-
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : MyInsCompl()
-function! MyInsCompl()
+function! MyInsCompl() abort
   let c = nr2char(getchar())
   if c == "l"
     return "\<C-x>\<C-l>"
@@ -157,15 +154,5 @@ function s:DeleteHiddenBuffers()
   endfor
 endfunction
 command -nargs=0 DeleteHiddenBuffers call s:DeleteHiddenBuffers()
-
-augroup MyFileTypeIndentOverRide
-  autocmd!
-  autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4
-  autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4
-  autocmd FileType rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd FileType vim setlocal tabstop=2 softtabstop=2 shiftwidth=2
-  autocmd FileType eruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
 
 source $VIMHOME/minpac.vim
