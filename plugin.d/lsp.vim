@@ -11,6 +11,8 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
   nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
   nmap <buffer> K <plug>(lsp-hover)
+  command! -nargs=0 -buffer ErrorList execute ':LspDocumentDiagnostics --buffers=*'
+
 endfunction
 
 augroup lsp_install
