@@ -13,7 +13,7 @@ if has('vim_starting') " Changing encoding in Vim at runtime is undefined behavi
   endif
   set fileencodings=utf-8,sjis,cp932,euc-jp
   set fileformats=unix,mac,dos
-    " Disable annoying bells
+  " Disable annoying bells
   set noerrorbells
   set novisualbell t_vb=
   if exists('&belloff')
@@ -156,3 +156,4 @@ endfunction
 command -nargs=0 DeleteHiddenBuffers call s:DeleteHiddenBuffers()
 
 source $VIMHOME/minpac.vim
+runtime! ftplugin/man.vim
