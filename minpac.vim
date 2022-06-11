@@ -22,6 +22,7 @@ function! s:init() abort
   call minpac#add('previm/previm')
   call minpac#add('ryanoasis/vim-devicons')
   call minpac#add('sheerun/vim-polyglot')
+  call minpac#add('thinca/vim-themis')
   call minpac#add('thinca/vim-quickrun')
   call minpac#add('thinca/vim-ref')
   call minpac#add('tpope/vim-fugitive')
