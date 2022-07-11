@@ -130,14 +130,14 @@ function! MyInsCompl() abort
   return "\<Tab>"
 endfunction
 
-function s:Indent()
+function! s:Indent()
   let save_cursor = getcurpos()
   execute "normal " . "gg=G"
   call setpos('.', save_cursor)
 endfunction
 command -nargs=0 Indent call s:Indent()
 
-function s:PluginList()
+function! s:PluginList()
   let files = split(globpath(&rtp, "pack/minpac/*/*"), "\n")
   call map(files, 'fnamemodify(v:val, ":t")')
   for plug in files
@@ -146,7 +146,7 @@ function s:PluginList()
 endfunction
 command -nargs=0 PluginList call s:PluginList()
 
-function s:DeleteHiddenBuffers()
+function! s:DeleteHiddenBuffers()
   let tpbl = []
   call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
   for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val) == -1')
@@ -154,6 +154,11 @@ function s:DeleteHiddenBuffers()
   endfor
 endfunction
 command -nargs=0 DeleteHiddenBuffers call s:DeleteHiddenBuffers()
+
+function! s:Todo()
+  tabnew $VIMHOME/todo.md
+endfunction
+command -nargs=0 Todo call s:Todo()
 
 source $VIMHOME/minpac.vim
 runtime! ftplugin/man.vim
