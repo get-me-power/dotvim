@@ -9,6 +9,7 @@ function! s:init() abort
   call minpac#add('easymotion/vim-easymotion')
   call minpac#add('editorconfig/editorconfig-vim')
   call minpac#add('glidenote/memolist.vim')
+  call minpac#add('itchyny/calendar.vim')
   call minpac#add('itchyny/vim-cursorword')
   call minpac#add('junegunn/fzf.vim')
   call minpac#add('lambdalisue/gina.vim')
@@ -33,6 +34,7 @@ function! s:init() abort
   call minpac#add('vim-jp/syntax-vim-ex')
   call minpac#add('vim-airline/vim-airline')
   call minpac#add('vim-airline/vim-airline-themes')
+  call minpac#add('whatyouhide/vim-gotham')
   " textobj
   call minpac#add('kana/vim-textobj-user')
   call minpac#add('kana/vim-textobj-indent')

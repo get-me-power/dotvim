@@ -46,7 +46,7 @@ filetype plugin indent on
 set autoindent
 set smartindent
 set background=dark
-silent! colorscheme iceberg
+silent! colorscheme gotham256
 
 set number
 set nobackup
