@@ -1,1 +1,1 @@
-set dictionary=$VIMHOGE/dict/git-commit
+set dictionary=$VIMHOME/dict/git-commit

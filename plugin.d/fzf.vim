@@ -2,7 +2,7 @@
 if executable('fzf')
   if has('mac')
     " homebrew install fzf
-    set rtp+=/usr/local/opt/fzf
+    set rtp+=/opt/homebrew/opt/fzf
   elseif has('linux')
     set rtp+=~/.fzf
   endif
