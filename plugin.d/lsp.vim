@@ -19,3 +19,6 @@ augroup lsp_install
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+let lsp_log_verbose=1
+let lsp_log_file = '/tmp/lsp.log'

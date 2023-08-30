@@ -16,7 +16,6 @@ function! s:init() abort
   call minpac#add('lambdalisue/suda.vim')
   call minpac#add('lambdalisue/glyph-palette.vim')
   call minpac#add('mattn/vim-lsp-settings')
-  call minpac#add('OmniSharp/omnisharp-vim')
   call minpac#add('prabirshrestha/vim-lsp')
   call minpac#add('prabirshrestha/asyncomplete.vim')
   call minpac#add('prabirshrestha/asyncomplete-lsp.vim')
@@ -42,7 +41,6 @@ function! s:init() abort
   call minpac#add('osyo-manga/vim-textobj-multiblock')
   call minpac#add('sgur/vim-textobj-parameter')
   "lazy loading
-  call minpac#add('dense-analysis/ale', {'type': 'opt'})
   call minpac#add('vim-jp/vital.vim', {'type': 'opt'})
 endfunction
 function! s:install() abort
